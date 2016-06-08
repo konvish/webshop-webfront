@@ -1,0 +1,45 @@
+* {
+    margin: 0px;
+    font-size: 12px;
+    color: #666666;
+}
+
+.error_style {
+    color: #FF0000;
+}
+
+.success {
+    background-image: url(../images/register/ok.gif);
+    background-repeat: no-repeat;
+    width: 100px;
+    height: 40px;
+}
+
+#register {
+    padding-left: 180px;
+    margin: 5px auto;
+}
+
+#register #bg {
+    background-image: url(../images/register/board_bg.gif);
+    background-repeat: repeat-y;
+    padding: 30px 0px;
+}
+
+#register form div {
+    margin: 0px 0px 30px 130px;
+}
+
+#register form div span {
+    margin-left: 5px;
+}
+
+#register form div input {
+    width: 130px;
+}
+
+#register form #sub {
+    width: 103px;
+    height: 26px;
+    margin-left: 70px;
+}

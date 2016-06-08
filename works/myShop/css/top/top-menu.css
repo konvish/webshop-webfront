@@ -1,0 +1,36 @@
+@charset "utf-8";
+*{
+	FONT-SIZE: 12px; COLOR: white
+}
+#logo {
+	COLOR: white;
+	BACKGROUND-IMAGE: url(/shopping/images/top/logo.gif);
+	BACKGROUND-REPEAT: no-repeat
+}
+#logo #top {
+	PADDING-RIGHT: 50px; 
+	BACKGROUND-POSITION: right 50%; 
+	DISPLAY: block; 
+	PADDING-LEFT: 0px; 
+	BACKGROUND-IMAGE: url(/shopping/images/top/bg_banner_menu.gif); 
+	PADDING-BOTTOM: 0px; 
+	PADDING-TOP: 3px; 
+	BACKGROUND-REPEAT: no-repeat; 
+	HEIGHT: 30px; 
+	TEXT-ALIGN: right
+}
+#logo #menu {
+	DISPLAY: block; 
+	HEIGHT: 54px
+}
+#logo #bot {
+	BACKGROUND-IMAGE:url(/shopping/images/top/bg_nav.gif);
+	BACKGROUND-REPEAT: repeat-x; 
+	HEIGHT: 30px
+}
+#logo A {
+	COLOR: white
+}
+FORM {
+	MARGIN: 0px
+}

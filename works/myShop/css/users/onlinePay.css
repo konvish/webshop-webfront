@@ -1,0 +1,103 @@
+* {
+    margin: 0px;
+    font-size: 12px;
+    color: #666666;
+}
+
+#showCar {
+    background-color: #F0F0F0;
+    border: 1px solid #D5D5D5;
+    padding: 10px;
+}
+
+#showCar #forderInfo {
+    background-color: #FFFFFF;
+    border: 1px solid #D5D5D5;
+    padding: 5px 0px 5px 10px;
+    margin: 10px 0px;
+}
+
+#showCar #forderInfo p {
+    margin: 10px 0px;
+}
+
+#showCar #forderInfo p span {
+    margin-right: 8px;
+}
+
+#showCar #pay {
+    border: 1px solid #D5D5D5;
+    margin-top: 10px;
+    padding: 3px 50px 3px 10px;
+    font-size: 14px;
+    font: bold;
+    color: #FF0000;
+    background-color: #FFF7D3
+}
+
+#showCar #pay img {
+    border: 0px;
+    float: left;
+    margin: 0px 12px;
+}
+
+#showCar #pay b {
+    font-size: 14px;
+    color: #000000;
+    float: left;
+    margin-top: 15px;
+}
+
+#showCar #pay span {
+    color: #990000;
+    float: left;
+    margin-top: 15px;
+}
+
+#showCar #paybank {
+    background-color: #FFFFFF;
+    border: 1px solid #D5D5D5;
+    border-top: 0px;
+    padding: 10px;
+    font-size: 14px;
+    font: bold;
+    color: #FF0000;
+    padding-right: 9px;
+}
+
+#showCar #paybank table td {
+    height: 38px;
+    line-height: 38px;
+}
+
+#paybank div {
+    clear: both;
+    background-color: #EEF5FF;
+    padding: 3px 8px;
+    margin-left: 120px
+}
+
+#paybank div span {
+    float: left;
+    margin: 3px 0px 0px 3px;
+    color: #000000
+}
+
+#showCar #goPay {
+    background-color: #FFFFFF;
+    border: 1px solid #D5D5D5;
+    padding: 10px;
+    margin-top: 10px;
+    text-align: right;
+    padding-right: 50px;
+    font-size: 14px;
+    font: bold;
+    color: #FF0000
+}
+
+#showCar #goPay input {
+    background-image: url(../../images/car/okPay.jpg);
+    border: 0px;
+    width: 126px;
+    height: 32px;
+}

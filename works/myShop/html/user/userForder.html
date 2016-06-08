@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>用户订单显示</title>
+    <link href="../../css/index/index.css" rel="stylesheet" type="text/css"/>
+    <link href="../../css/users/userForder.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="../../js/public.js"></script>
+    <script type="text/javascript" src="../../js/jquery.js"></script>
+    <script type="text/javascript" src="../../libs/avalon.js"></script>
+    <script type="text/javascript" src="../../js/user/common.js"></script>
+    <script type="text/javascript" src="../../js/user/userForder.js"></script>
+</head>
+
+<body>
+<div id="right" style="width:780px; margin-bottom:10px;" ms-controller="userForderModel">
+    <div style="background-image:url(../../images/users/xiangxi-center-top.jpg);background-repeat:repeat-x;height:8px;clear:both">
+        <img style="float:left" src="../../images/users/xiangxi-left-top.jpg"/>
+        <img style="float:right" src="../../images/users/xiangxi-right-top.jpg"/>
+
+        <div style="clear:both"></div>
+    </div>
+    <div style="background-image:url(../../images/users/Snap5.jpg);background-repeat:repeat-y;padding-bottom:30px;">
+        <div id="xinxi">
+            <!-- 会员的基本信息 -->
+            <div style="border-bottom:1px dashed #cccccc">
+                <p>您目前的会员级别是：<b style="color:#990000; font-size:12px">普通会员</b></p>
+
+                <p>截止到现在，你目前已有<b style="color:#990000;font-size:12px;margin:0px 3px;">{{totalNumber}}</b>张订单完成交易
+                </p>
+
+                <p>累计消费<b style="color:#990000;font-size:12px;margin:0px 3px;">{{totalPrice}}</b>元</p>
+            </div>
+            <!-- 会员的基本信息结束 -->
+            <div>
+                <h1 style="border-bottom:2px solid #cccccc; margin:20px 0px; font-size:14px">所有订单</h1>
+                <table width="100%" cellspacing="0" cellpadding="0" style="border:1px solid #E5E5E5" id="shuju">
+                    <tr>
+                        <td style="background-color:#F9F9F9; width:118px; height:28px;">订单号</td>
+                        <td style="background-color:#F9F9F9; width:118px; height:28px;">收货人</td>
+                        <td style="background-color:#F9F9F9; width:65px; height:28px;">总价</td>
+                        <td style="background-color:#F9F9F9; width:88px; height:28px;">订单详情</td>
+                        <td style="background-color:#F9F9F9; width:88px; height:28px;">操作</td>
+                        <td style="background-color:#F9F9F9; width:88px; height:28px;">订单状态</td>
+                    </tr>
+                    <!-- 一个订单的基本信息 最多循环10次-->
+                    <tr ms-repeat="orderList">
+                        <td>{{el.id}}</td>
+                        <td>{{el.name}}</td>
+                        <td>{{el.total}}</td>
+                        <td>
+                            <a href="" style="color:#000000">查看订单详情</a>
+                        </td>
+                        <td>
+
+                            <a style="color:#000000" ms-if-loop="el.status==0" class="annul"
+                               ms-attr-id="{{el.id}}">取消订单</a>
+
+                            <span ms-if-loop="el.status==6"
+                                  style="color:#000000;text-decoration:line-through;">取消订单</span>
+
+                        </td>
+                        <td>
+                            <span ms-if-loop="el.status==0" style="color:#000000;">交易完成</span>
+
+                            <span ms-if-loop="el.status==6" style="color:#000000;">无效订单</span>
+
+
+                        </td>
+                    </tr>
+                    <!-- 一个订单的基本信息结束 -->
+                    <tr>
+                        <td colspan="7" style="text-align:right; padding-right:20px;background-color:#FFFFFF">
+                            <span style="margin:0px 5px;">
+                                <div class="page-box">共有 {{totalRecord}} 条记录
+                                    <a  ms-attr-disabled-attr="currentPage==1" ms-click="homePage()">首页</a >
+                                    <a  ms-attr-disabled-attr="currentPage==1" ms-click="prev()">上一页</a>
+                                    <a  ms-attr-disabled-attr="currentPage==totalPage" ms-click="next()">下一页</a>
+                                    <a  ms-click="endPage()">尾页</a>
+                                    当前页数:{{currentPage}}/{{totalPage}} &nbsp;&nbsp;&nbsp;&nbsp;输入页数:
+                                    <input   type="text" maxlength="6" id="PageBig1_TxtGoTo" >
+                                    <a  ms-click="page()">确认</a>
+                                </div>
+                            </span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+
+            <div style="padding-top:30px;padding-left:20px;" ms-if="totalRecord==0">您还没有生成任何订单,返回<a href="../index.html"
+                                                                                                    style="padding-left:20px; color:#ff0000;"
+                                                                                                    target="_parent">Gogo购物商城首页</a>
+            </div>
+
+        </div>
+        <div style="clear:both"></div>
+    </div>
+    <div style="background-image:url(../../images/users/xiangxi-center-bot.jpg);background-repeat:repeat-x;height:8px;clear:both">
+        <img style="float:left" src="../../images/users/xiangxi-left-bot.jpg"/>
+        <img style="float:right" src="../../images/users/xiangxi-right-bot.jpg"/>
+
+        <div style="clear:both"></div>
+    </div>
+</div>
+</body>
+</html>
+

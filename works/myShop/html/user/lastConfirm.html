@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Gogo商场,享受无限经典</title>
+    <meta charset="UTF-8">
+    <link href="../../css/index/index.css" rel="stylesheet" type="text/css"/>
+    <link href="../../css/users/lastConfirm.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="../../js/jquery.js"></script>
+    <script type="text/javascript" src="../../js/area.js"></script>
+    <script type="text/javascript" src="../../libs/avalon.js"></script>
+    <script type="text/javascript" src="../../js/user/common.js"></script>
+    <script type="text/javascript" src="../../js/user/lastConfirm.js"></script>
+</head>
+
+<body ms-controller="lastConfirmModel">
+<div style="width:980px; margin:0px auto;">
+    <div ms-controller="header" ms-include-src="'header.html'"></div>
+
+    <div id="mid" style="margin-bottom:20px;">
+        <div style="margin:30px 0px; ">
+            <img src="../../images/car/navigation2.jpg"/>
+        </div>
+        <div>
+            <div style="margin-left:8px;"><b style="color:#333333">订购人信息</b></div>
+            <div style="margin:20px 0px; margin-left:8px; border:1px solid #cccccc" id="digouren">
+                <div class="dizhi" style="padding:3px 0px; padding-left:45px;">
+                    <span style="margin-right:10px;">真实姓名：</span><span>{{orderPerson.name}}</span>
+                </div>
+                <div class="dizhi" style="padding:3px 0px; padding-left:45px;">
+                    <span style="margin-right:10px;">通讯地址：</span><span>{{orderPerson.address}}</span>
+                </div>
+                <div class="dizhi" style="padding:3px 0px; padding-left:45px;">
+                    <span style="margin-right:10px;">通讯电话：</span><span>{{orderPerson.phone}}</span>
+                </div>
+                <div class="dizhi" style="padding:3px 0px; padding-left:45px;">
+                    <span style="margin-right:10px;">电子邮件：</span><span>{{orderPerson.email}}</span>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div style="margin-left:8px;"><b style="color:#333333">确认收货地址</b></div>
+            <div style="margin-top:20px; margin-left:8px; padding:10px 0px; border:1px solid #cccccc" id="xuanzhi">
+                <div class="dizhi" id="diz" style="padding-left:45px;" ms-repeat="userArea">
+                    <input type="radio" name="dizhi" ms-click="checkedUser(el.id)" ms-attr-checked="$index==0" ms-attr-id="el.id"/>
+
+                    <label> 收货人：</label><span>{{el.name}}</span><label>电话:</label>
+                    <span>{{el.phone}}</span><label>送货地址: </label><span>{{el.address}}</span><label>邮政编码:</label><span>{{el.post}}</span>
+
+                    <input type="button" value="删除" style="padding-right: 8px" ms-click="deleteUserArea(el.id)">
+                </div>
+                <div class="dizhi" style="margin-top:10px; padding-left:45px;">
+                    <input type="button" name="dizhi" onclick="showDiv()" value="新增" id="otherAdd"/>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div style="margin-left:8px; margin-top:40px;"><b style="color:#333333">确认订单信息</b></div>
+            <div id="showCar">
+                <div>
+                    <table width="100%" cellspacing="0" cellpadding="0">
+                        <tr id="title">
+                            <td width="100">商品编号</td>
+                            <td width="370">商品名称</td>
+                            <td width="90">销售价格</td>
+                            <td width="100">数量</td>
+                            <td width="80">小计</td>
+                        </tr>
+                        <!-- 这里显示购物车里面的一个商品 -->
+                        <tr ms-repeat="commodityList">
+                            <td>{{el.commodityId}}</td>
+                            <td>{{el.commodityName}}</td>
+                            <td>{{el.price}}</td>
+                            <td>{{el.number}}</td>
+                            <td>{{el.price*el.number}}</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="ftotal">商品总价:￥{{totalPrice}}</div>
+                <div style="margin-top:10px;">
+                    <b style="color:#333333; font-size:12px; float:left; margin-right:5px;">给卖家留言:</b>
+                    <textarea name="fremark" id="fremark" cols="60" rows="2"></textarea>
+                </div>
+                <div class="ftotal">
+                    <input type="button" id="sub" value=" " ms-click="submitOrder()"/>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div ms-controller="footer" ms-include-src="'footer.html'"></div>
+</div>
+<div id="popDiv" class="mask_box" style="display:none;">
+    <div class="win_box">
+        <div class="win_top"></div>
+        <h4 style="padding:8px;">
+            <span>请填写收货地址:</span>
+        </h4>
+
+        <form name="form1">
+            <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                <tr>
+                    <td width="88" height="40" align="right">省：<span style="color:#FF0000">*</span></td>
+                    <td width="401">
+                        <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                            <tr>
+                                <td width="78">
+                                    <select name=selectp id="private">
+                                        <option selected value=0>不限--</option>
+                                    </select>
+                                </td>
+                                <td width="28">市：</td>
+                                <td width="71"><select name=selectc id=selectc>
+                                    <option selected value=0>不限--</option>
+                                </select></td>
+                                <td width="74">邮政编码：<span style="color:#FF0000">*</span></td>
+                                <td><input type="text" size="10" id="upost" name="upost"/></td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="88" height="58" align="right" valign="top">街道地址：<span style="color:#FF0000">*</span></td>
+                    <td>
+                        <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                            <tr>
+                                <td>
+                                    <textarea id="uaddress" name="gxremark" cols="45" rows="3"></textarea>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td height="31" align="right">收货人姓名：<span style="color:#FF0000">*</span></td>
+                    <td>
+                        <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                            <tr>
+                                <td><input type="text" name="uname" id="uname"/></td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td height="29" align="right">联系电话：<span style="color:#FF0000">*</span></td>
+                    <td>
+                        <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                            <tr>
+                                <td><input type="text" name="uphone" id="uphone"/></td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td height="29" align="right">E-mail：&nbsp;&nbsp;</td>
+                    <td>
+                        <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                            <tr>
+                                <td><input type="text" name="uemail" id="uemail"/></td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td height="45"></td>
+                    <td>
+                        <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                            <tr>
+                                <td width="21%"><input type="button" name="" value="确定" ms-click="checkData()"
+                                                       style="width:60px; height:25px;"/></td>
+                                <td width="79%"><input class="off" type="button" name="" onclick="closeDiv()" value="关闭"
+                                                       style="width:60px; height:25px;"/></td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">红色带 <span style="color:#FF0000"> * </span> 号的信息为必填项
+                    <td>
+                <tr>
+            </table>
+        </form>
+        <script type="text/javascript">
+            first("selectp", "selectc", "form1", 0, 0);
+            $("#private").change(function () {
+                selectcityarea('selectp', 'selectc', 'form1');
+            });
+        </script>
+    </div>
+</div>
+<div id="bg" class="bg" style="display:none;"></div>
+</body>
+</html>

@@ -1,0 +1,21 @@
+@charset "utf-8";
+/* CSS Document */
+#flash{
+	FILTER: progid:DXImageTransform.Microsoft.Wipe(GradientSize=1.0,wipeStyle=0, motion='forward'); 
+	WIDTH: 566px;
+	HEIGHT: 259px;
+	POSITION: relative;
+}
+#flash img{
+	width:566px;
+	height:259px;
+}
+.slider_span {
+	POSITION: absolute; BOTTOM: 10px; RIGHT: 5px
+}
+.slider_span SPAN {
+	BORDER-BOTTOM: #333 1px solid; BORDER-LEFT: #333 1px solid; PADDING-BOTTOM: 2px; BACKGROUND-COLOR: #888; PADDING-LEFT: 4px; PADDING-RIGHT: 4px; DISPLAY: block; FLOAT: left; COLOR: white; BORDER-TOP: #333 1px solid; CURSOR: pointer; MARGIN-RIGHT: 3px; BORDER-RIGHT: #333 1px solid; PADDING-TOP: 2px
+}
+.slider_span SPAN.mouseon {
+	BACKGROUND-COLOR: white; COLOR: #888; FONT-WEIGHT: bold
+}

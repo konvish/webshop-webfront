@@ -1,0 +1,30 @@
+	a img{border:0px;}
+	*{margin:0px; font-size:12px;}
+	#shuju{
+		width:100%;
+		border:0px;
+		background-color:#b5d6e6;
+	}
+	#shuju td{
+		 height:22px;
+		 text-align:center;
+		 line-height:22px;
+	}
+	#shuju td a{color:#000000; text-decoration:none;}
+	#que_text_center span{
+		display:block;
+		width:305px;
+		padding-top:8px;
+	}
+	#que_text_center span #que_submit{
+		margin-left:15px;
+		width:40px;
+		height:20px;
+		background-color: #1862BB;
+		font-size:12px;
+		color:#FFFFFF;
+		border:none;
+	}
+	.bg1{background-color:#E8F6FF}
+	.bg{background-color:#ffffff}
+	.click{background-color:#ccffff}

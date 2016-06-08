@@ -1,0 +1,286 @@
+@charset "utf-8";
+/* CSS Document */
+a {
+    text-decoration: none
+}
+
+b {
+    color: #FFFFFF;
+    font-size: 14px;
+}
+
+#top #con {
+    background-image: url(../../images/index/top_line1_bg.gif);
+    width: 642px;
+    height: 33px;
+    float: right;
+    line-height: 33px;
+}
+
+#con .c a {
+    color: #000000;
+    text-align: center;
+    padding: 0px 15px;
+}
+
+#con a:hover {
+    text-decoration: underline;
+}
+
+#logo {
+    height: 80px;
+    clear: both;
+}
+
+#logo #beat {
+    float: left;
+    margin-left: 160px;
+    padding-top: 30px;
+}
+
+#logo #car {
+    width: 230px;
+    height: 26px;
+    line-height: 26px;
+    background-image: url(../../images/index/shop-bg.jpg);
+    float: right;
+    margin-top: 30px;
+    margin-right: 15px;
+}
+
+#logo form {
+    background-image: url(../../images/index/top_line2_search_bg.gif);
+    background-repeat: no-repeat;
+    padding-left: 2px;
+    margin-left: 40px;
+}
+
+form #text {
+    width: 250px;
+    border: 0px;
+    float: left;
+    margin: 5px 0px 0px 3px;
+}
+
+form #submit {
+    background-image: url(../../images/index/top_line2_search_02.gif);
+    width: 26px;
+    height: 25px;
+    border: 0px;
+    text-indent: -200px;
+    margin-left: 8px;
+}
+
+#menu {
+    height: 37px;
+    clear: both;
+    background-image: url(../../images/index/menu-bg.gif);
+    line-height: 37px;
+}
+
+#menu ul {
+    padding: 0px;
+    list-style: none;
+    text-align: center;
+}
+
+#menu ul li {
+    width: 100px;
+    color: #FFFFFF;
+    float: left;
+    margin: 0px 10px;
+}
+
+#menu ul .img {
+    width: 5px;
+    margin: 0px;
+}
+
+#menu ul li a {
+    border: 0px;
+    display: block;
+    color: #FFFFFF;
+    text-decoration: none;
+    font: bold;
+    height: 35px;
+    line-height: 35px;
+}
+
+#menu ul li a:hover {
+    background-image: url(../../images/index/hover.gif);
+    padding-left: 12px;
+}
+
+#menu ul li a:hover b {
+    background-image: url(../../images/index/hover.gif);
+    color: #FFFFFF;
+    background-position: right;
+    display: block;
+    padding-right: 12px;
+}
+
+#menu ul .img img {
+    margin-top: 11px
+}
+
+#mid #left {
+    float: left;
+    width: 177px;
+}
+
+#left #cell {
+    margin-bottom: 5px;
+    height: 390px;
+}
+
+#left .small {
+    float: left;
+    width: 177px;
+}
+
+#left .pinpai {
+    border-left: 1px solid #cccccc;
+    border-right: 1px solid #cccccc;
+    padding: 5px;
+    clear: both;
+}
+
+#left .pinpai h2 {
+    border-bottom: 1px dashed #CCCCCC;
+    margin-bottom: 3px;
+}
+
+#left .pinpai h2 a {
+    color: #FF0000;
+    font-size: 14px
+}
+
+#left .pinpai p {
+    padding: 5px 0px 5px 20px;
+    width: 145px;
+    height: 18px;
+}
+
+#left .pinpai p a:hover {
+    color: #ff0000;
+    text-decoration: underline;
+}
+
+#left .pinpai p span {
+    margin: 0px 5px;
+}
+
+#mid #right {
+    float: right;
+    width: 795px;
+    margin-left: 5px;
+}
+
+#right .context {
+    width: 795px;
+}
+
+.context .contextTop {
+    background-image: url(../../images/index/bg-top.jpg);
+    height: 34px;
+    line-height: 34px;
+}
+
+.context .contextMid {
+    border-left: 1px solid #cccccc;
+    border-right: 1px solid #cccccc;
+    height: 255px;
+    padding: 5px;
+}
+
+.contextMid img {
+    border: 0px;
+    width: 154px;
+    height: 200px;
+}
+
+.context .contextBot {
+    background-image: url(../../images/index/mid-bg.jpg);
+    height: 10px;
+    margin-bottom: 5px;
+}
+
+#bot {
+    width: 100%;
+    clear: both
+}
+
+#bot #we {
+    text-align: center;
+    height: 35px;
+    line-height: 35px;
+    border: 1px solid #cccccc;
+}
+
+#bot #we a:hover {
+    color: #999999;
+}
+
+#bot #info {
+    text-align: center;
+    width: 80%;
+    margin: 0px auto;
+}
+
+#bot p {
+    margin: 10px auto;
+}
+
+#bot hr {
+    border-top: 1px solid #cccccc;
+    height: 0px;
+}
+
+#info img {
+    margin-right: 2px;
+}
+
+* {
+    margin: 0px;
+    font-size: 12px;
+    color: #666666;
+}
+
+a img {
+    border: 0px;
+}
+
+.border {
+    border: 1px dashed #ffffff;
+}
+
+.showBorder {
+    border: 1px dashed #FF0000;
+}
+
+#btn span {
+    font-size: 13px;
+    padding-right: 3px;
+    border-right: 1px solid #FFFFFF;
+    display: block;
+    float: left;
+    width: 24px;
+    height: 18px;
+    text-align: center;
+}
+
+#btn {
+    background-color: #FFFF00;
+}
+
+.over {
+    background-color: #FF0000;
+}
+
+/*翻页*/
+.banner_pre_next{}
+.banner_pre_next a{ width:47px; height:47px; background:url(../../images/btn.png) no-repeat; text-indent:-999em;display: block; position:absolute; top:40%;  z-index:9999;}
+.banner_pre_next .banner_btn_left{background-position:3px 0px;filter:alpha(Opacity=80);-moz-opacity:0.5;opacity: 0.6;left:30%;}
+.banner_pre_next .banner_btn_right{background-position:-47px 0px;filter:alpha(Opacity=80);-moz-opacity:0.5;opacity: 0.6; right:33%;}
+
+.rightbox{background-position:3px 0px;filter:alpha(Opacity=80);-moz-opacity:0.5;opacity: 0.6;left:30%;}

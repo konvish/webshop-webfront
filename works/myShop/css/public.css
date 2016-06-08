@@ -1,0 +1,28 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	font-size:12px;
+}
+
+td,ul,li,table,p{
+	margin:0px;
+	padding:0px;
+	border:0px;
+	list-style:none;
+}
+input{
+	margin:0px;
+	padding:0px;
+}
+a{
+	text-decoration:none;
+}
+a img{
+	border:0px;
+}

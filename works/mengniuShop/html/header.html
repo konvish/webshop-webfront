@@ -1,0 +1,282 @@
+<div style="height: 147px;" id="header" class="header">
+    <div class="header-panel clearfix">
+        <div class="loginbox">
+            <div class="userrole">
+
+                Hi，欢迎来幸福动车&nbsp;&nbsp;&nbsp;<a class="blue" href="http://mall.mengniu.com.cn/login">登录</a>&nbsp;&nbsp;&nbsp;<a
+                    class="blue" href="http://mall.mengniu.com.cn/login/userRegister">免费注册</a>
+            </div>
+            <div class="delivery-city"><span>送货至</span> <a href=""><span id="result"></span> <i
+                    class="icon icon-arrow-up"></i></a>
+
+                <div class="d-city-list">
+                    <ul>
+                        <li>请根据您的收货地址选择：</li>
+                        <li><b>A - F</b>
+									<span>
+									<a href="javascript:saveCity(340000)">安徽</a>
+									<a href="javascript:saveCity(820000)">澳门</a>
+									<a href="javascript:saveCity(110000)">北京</a>
+									<a href="javascript:saveCity(500000)">重庆</a>
+									<a href="javascript:saveCity(350000)">福建</a>
+									</span></li>
+                        <li><b>G - H</b>
+									<span>
+									<a href="javascript:saveCity(620000)">甘肃</a>
+									<a href="javascript:saveCity(440000)">广东</a>
+									<a href="javascript:saveCity(450000)">广西</a>
+									<a href="javascript:saveCity(520000)">贵州</a>
+									<a href="javascript:saveCity(460000)">海南</a>
+									<a href="javascript:saveCity(130000)">河北</a>
+									<a href="javascript:saveCity(230000)">黑龙江</a>
+									<a href="javascript:saveCity(410000)">河南</a>
+									<a href="javascript:saveCity(420000)">湖北</a>
+									<a href="javascript:saveCity(430000)">湖南</a>
+									</span></li>
+                        <li><b>J - Q</b>
+									<span>
+									<a href="javascript:saveCity(320000)">江苏</a>
+									<a href="javascript:saveCity(360000)">江西</a>
+									<a href="javascript:saveCity(220000)">吉林</a>
+									<a href="javascript:saveCity(210000)">辽宁</a>
+									<a href="javascript:saveCity(150000)">内蒙古</a>
+									<a href="javascript:saveCity(640000)">宁夏</a>
+									<a href="javascript:saveCity(630000)">青海</a></span></li>
+                        <li><b>S - T</b>
+									<span>
+									<a href="javascript:saveCity(610000)">陕西</a>
+									<a href="javascript:saveCity(370000)">山东</a>
+									<a href="javascript:saveCity(140000)">山西</a>
+									<a href="javascript:saveCity(310000)">上海</a>
+									<a href="javascript:saveCity(510000)">四川</a>
+									<a href="javascript:saveCity(120000)">天津</a>
+									<a href="javascript:saveCity(710000)">台湾</a></span></li>
+                        <li><b>X - Z</b>
+									<span>
+									<a href="javascript:saveCity(540000)">西藏</a>
+									<a href="javascript:saveCity(810000)">香港</a>
+									<a href="javascript:saveCity(650000)">新疆</a>
+									<a href="javascript:saveCity(530000)">云南</a>
+									<a href="javascript:saveCity(330000)">浙江</a></span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="right">
+                <div class="official-website">
+                    <a class="checnum" href="http://mall.mengniu.com.cn/my-account">会员中心</a>
+                </div>
+                <div class="official-website">
+                    <a class="checnum" href="http://mall.mengniu.com.cn/my-account/orders">我的订单</a>
+                </div>
+                <!-- </a> -->
+                <div id="shopping-minicart" class="shopping-cart">
+                    <i class="icon icon-cart" aria-hidden="true"></i>
+                    <a href="http://mall.mengniu.com.cn/cart">购物车&nbsp;<span id="cartTotalItems"
+                                                                             style="font-weight:bold;color:black;">0</span>
+                        件</a>
+                    <i class="icon icon-arrow-up" aria-hidden="true"></i>
+
+                    <div id="checkout-list" class="checkout-list"
+                         data-refreshminicarturl="/cart/miniCart/SUBTOTAL/?"
+                         data-rolloverpopupurl="/cart/rollover/MengniuMiniCart"></div>
+                </div>
+
+                <div class="mobile-app">
+                    <i class="icon icon-mobile" aria-hidden="true"></i>
+                    <a class="checnum" href="">手机蒙牛</a>
+                    <i class="icon icon-arrow-up" aria-hidden="true"></i>
+
+                    <div class="app-promotion">
+                        <div class="app-bg"></div>
+                        <div class="app-pic"><img src="index_files/QRCode2.png">
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="share-link">
+                    <i class="icon icon-share-wechat" aria-hidden="true"></i>
+                    <i class="icon icon-share-weibo" aria-hidden="true"></i>
+                    <a class="checnum" href="">关注我们</a>
+                    <i class="icon icon-arrow-up" aria-hidden="true"></i>
+
+                    <div class="share-promotion">
+                        <div class="share-bg"></div>
+                        <div class="share-pic"><img src="index_files/share-weibowachat_01.png"><a
+                                onclick="javascript:_utaq.push(['trackEvent', 'N1_banner5']);"
+                                href="http://weibo.com/mengniu1999" target="_blank"
+                                style="padding:0;float:inherit;"><img
+                                src="index_files/share-weibowachat_02.png"></a></div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div style="display: none;" id="ad-div" class="header-ad">
+        <a href="javascript:void(0);"><span id="ad-closed" class="header-ad-close"></span></a>
+    </div>
+
+    <div class="header-items clearfix">
+
+        <div class="logo">
+            <div class="yCmsComponent">
+                <div class="simple_disp-img">
+                    <a href="http://mall.mengniu.com.cn/"><img title="" alt="" src="index_files/logo.png"></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="js-menu-link menu-link formobile">
+            <img src="index_files/nav_icon.png">
+        </div>
+
+        <div class="header-rhs">
+
+            <div class="sitesearch">
+                <form id="SimpleSearchForm" name="search_form" class="simplesearch" method="get" action="/search/">
+                    <input aria-haspopup="true" aria-autocomplete="list" role="textbox" autocomplete="off"
+                           id="searchinput" class="simplesearchinput ui-autocomplete-input" name="text"
+                           maxlength="100" placeholder="买贵就赔"
+                           data-options="{&quot;autocompleteUrl&quot; : &quot;/search/autocomplete/SearchBox&quot;,&quot;minCharactersBeforeRequest&quot; : &quot;1&quot;,&quot;waitTimeBeforeRequest&quot; : &quot;500&quot;,&quot;displayProductImages&quot; : true}"
+                           type="text">
+                    <button name="simplesearch" value="Search" type="submit" onclick="javascript:bindInput();">搜索
+                    </button>
+                </form>
+                <ul style="z-index: 11; top: 0px; left: 0px; display: none;"
+                    aria-activedescendant="ui-active-menuitem" role="listbox"
+                    class="ui-autocomplete ui-menu ui-widget ui-widget-content ui-corner-all"></ul>
+            </div>
+        </div>
+    </div>
+
+    <a id="skiptonavigation"></a>
+
+    <div class="clearfix"></div>
+    <div class="nav clear" id="navMenu">
+        <div class="category show">
+            <a class="all-category" href="http://mall.mengniu.com.cn/All-goods/c/1" title="全部分类"></a>
+
+            <div class="category-list">
+
+                <div class="category-list-detail">
+                    <i class="icon icon-leaf-roll" aria-hidden="true"></i>
+
+                    <div class="primary-class">
+                        <i class="icon icon-labeled-off" aria-hidden="true"></i>
+                        <a href="http://dwz.cn/1KTQeN" title="买贵就赔专区">买贵就赔专区</a><i class="icon icon-labeled-moreoff"
+                                                                                   aria-hidden="true"></i>
+                    </div>
+                    <div class="detail">
+                    </div>
+                    <div class="secondary_category">
+                        <div class="pic">
+                            <img title="banner02.jpg" alt="banner02.jpg" src="index_files/banner02.jpg">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="category-list-detail">
+                    <i class="icon icon-leaf-roll" aria-hidden="true"></i>
+
+                    <div class="primary-class">
+                        <i class="icon icon-labeled-off" aria-hidden="true"></i>
+                        <a href="http://mall.mengniu.com.cn/c/827?sort=topRated&amp;q=%3Arelevance#" title="常温奶系列">常温奶系列</a><i
+                            class="icon icon-labeled-moreoff" aria-hidden="true"></i>
+                    </div>
+                    <div class="detail">
+                        <a href="http://mall.mengniu.com.cn/c/831?sort=topRated&amp;q=%3Arelevance#"
+                           title="特仑苏">特仑苏</a>&nbsp;
+                        <a href="http://mall.mengniu.com.cn/c/833?sort=topRated&amp;q=%3Arelevance#"
+                           title="儿童奶">儿童奶</a>&nbsp;
+                        <a href="http://mall.mengniu.com.cn/c/834?sort=topRated&amp;q=%3Arelevance#"
+                           title="奶特">奶特</a>&nbsp;
+                        <a href="http://mall.mengniu.com.cn/c/835?sort=topRated&amp;q=%3Arelevance#"
+                           title="焕轻">焕轻</a>&nbsp;
+                        <a href="http://mall.mengniu.com.cn/c/836?sort=topRated&amp;q=%3Arelevance#"
+                           title="真果粒">真果粒</a>&nbsp;
+                        <a href="http://mall.mengniu.com.cn/c/837?sort=topRated&amp;q=%3Arelevance#"
+                           title="新养道">新养道</a>&nbsp;
+                        <a href="http://mall.mengniu.com.cn/c/840?sort=topRated&amp;q=%3Arelevance#"
+                           title="纯甄">纯甄</a>&nbsp;
+                        &nbsp;
+                        <a href="http://mall.mengniu.com.cn/c/851?sort=topRated&amp;q=%3Arelevance"
+                           title="酸酸乳">酸酸乳</a>&nbsp;
+                        <a href="http://mall.mengniu.com.cn/c/825" title="嗨Milk纯牛奶">嗨Milk纯牛奶</a>&nbsp;
+                        <a href="http://mall.mengniu.com.cn/c/001" title="M-PLUS">M-PLUS</a>&nbsp;
+                    </div>
+                    <div class="secondary_category">
+                        <div class="pic">
+                            <img title="" alt="" src="index_files/1000x349.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="category-list-detail">
+                    <i class="icon icon-leaf-roll" aria-hidden="true"></i>
+
+                    <div class="primary-class">
+                        <i class="icon icon-labeled-off" aria-hidden="true"></i>
+                        <a href="http://mall.mengniu.com.cn/c/828" title="奶粉系列">奶粉系列</a><i
+                            class="icon icon-labeled-moreoff" aria-hidden="true"></i>
+                    </div>
+                    <div class="detail">
+                    </div>
+                    <div class="secondary_category">
+                        <div class="pic">
+                            <img title="" alt="" src="index_files/banner-.jpg">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="category-list-detail">
+                    <i class="icon icon-leaf-roll" aria-hidden="true"></i>
+
+                    <div class="primary-class">
+                        <i class="icon icon-labeled-off" aria-hidden="true"></i>
+                        <a href="http://mall.mengniu.com.cn/%E5%85%A8%E9%83%A8%E5%95%86%E5%93%81/%E7%89%B9%E8%89%B2%E4%BA%A7%E5%93%81%E4%B8%93%E5%8C%BA/c/006"
+                           title="特色产品专区">特色产品专区</a><i class="icon icon-labeled-moreoff" aria-hidden="true"></i>
+                    </div>
+                    <div class="detail">
+                        <a href="http://mall.mengniu.com.cn/%E5%85%A8%E9%83%A8%E5%95%86%E5%93%81/%E7%89%B9%E8%89%B2%E4%BA%A7%E5%93%81%E4%B8%93%E5%8C%BA/c/006"
+                           title="特色产品专区">特色产品专区</a>&nbsp;
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <ul class="column">
+            <li class="formobile"><a href="http://mall.mengniu.com.cn/login">登录</a>
+                <a href="http://mall.mengniu.com.cn/login/userRegister">注册</a>
+            </li>
+            <li class="tit"><a href="http://mall.mengniu.com.cn/All-goods/c/1"><b class="green formobile">All</b>全部商品</a><i
+                    class="icon icon-arrow-up" aria-hidden="true"></i></li>
+            <!-- <li class="tit"><a href="">全部商品</a><i class="icon icon-arrow-up" aria-hidden="true"></i></li> -->
+            <li class="period"><a
+                    href="http://mall.mengniu.com.cn/campaignpage/period?date=2016-03-07%2023:25:36"><i
+                    style="background: url('/_ui/desktop/mengniuo2o/images/mgjp_litle.png');width: 28px;height: 28px;float: left;margin-top: -5px;"
+                    aria-hidden="true"></i><span class="title">买贵就赔</span></a></li>
+            <li><a href="http://mall.mengniu.com.cn/personalstock/redeemStock"><i class="icon icon-stock"
+                                                                                  aria-hidden="true"></i><span
+                    class="title">提取赠礼</span><i class="icon icon-red-hot" aria-hidden="true"></i></a></li>
+            <li><a href="http://mall.mengniu.com.cn/personalstock/redeemStock"><i class="icon icon-integral"
+                                                                                  aria-hidden="true"></i><span
+                    class="title">我的存货</span></a></li>
+            <li class="last-li"><a id="integralShop" href="http://mall.mengniu.com.cn/point/main"><i
+                    class="icon icon-store" aria-hidden="true"></i><span class="title">积分商城</span></a></li>
+
+            <!-- <li class="cart formobile"><a href=""><i aria-hidden="true" class="icon icon-cart"></i><span class="title">购物车 0 件</span></a> -->
+            <li class="cart formobile"><a href="http://mall.mengniu.com.cn/cart"><i aria-hidden="true"
+                                                                                    class="icon icon-cart"></i><span
+                    class="title">购物车 <span id="mobileCartTotalItems" class="red">0</span> 件</span></a></li>
+            <li class="formobile"><a href="">蒙牛官网</a></li>
+
+        </ul>
+
+        <span class="nav-close formobile"></span>
+
+    </div>
+</div>

@@ -1,0 +1,75 @@
+* {
+		margin:0px;
+		font-size:12px;
+		color:#666666;
+	}
+	* {
+		margin:0px;
+		font-size:12px;
+		color:#666666;
+	}
+	#users .border{
+		width:7px; height:100px; background-repeat:repeat-y;
+	}
+	#users #use{float:left;}
+	#users #use p{margin:20px 0px 10px 12px;}
+	.dingdan{background-image:url(../../images/users/users-mid.jpg); height:100px; padding:10px;}
+	.dingdan p{border-bottom:1px dashed #cccccc; margin-bottom:6px; padding-left:20px; padding-bottom:6px;}
+	.dingdan p a{color:#000000;}
+	#xinxi{padding:15px;}
+	#xinxi p{margin:8px 0px;}
+	#xinxi table td{height:25px; text-align:center;border-bottom:1px solid #E5E5E5; border-right:1px solid #E5E5E5;}
+	#xinxi p{margin:20px 0px 0px 20px;}
+	#xinxi form{
+		margin: 0px auto;
+		width: 450px;
+		padding-top:15px;
+	}
+	#xinxi .bo{
+		padding:10px 0px;
+	}
+	#xinxi label{
+		float: left;
+		color:#000000;
+		padding: 10px 0px 4px 30px;
+	}
+	#xinxi input{
+		padding: 1px;
+	}
+	#xinxi input,textarea{
+		border: 1px solid #CCCCCC;
+		margin: 5px 0px;
+	}
+	#xinxi .bt{
+		width: 38px;
+		height: 20px;
+		font-size: 11px;
+		border: solid 1px #CCCCCC;
+		background: #FBFBFB;
+		text-align: center;
+	}
+	#xinxi .btcenter{
+		text-align: center;
+		clear: left;
+		padding: 4px 0px 0px;
+	}
+	#xinxi .sffocus {
+		background: #F0F9FB; /*----for IE----*/
+		border: 1px solid #1D95C7;
+	}
+	#xinxi input:focus {
+		background: #F0F9FB; /*----for firefox......----*/
+		border: 1px solid #1D95C7;
+	}
+	#xinxi #sub{
+		background-image:url(../../images/users/subbg.jpg);
+		width:47px;
+		height:20px;
+		color:#FFFFFF;
+		border:0px;
+		margin-left:100px;
+		padding-left:5px;
+	}
+	.error_style{
+		color:#ff0000;
+	}

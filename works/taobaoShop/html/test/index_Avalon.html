@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>todoList</title>
+    <link href="../../css/test/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-5" ms-controller="todos">
+            <form ms-on-submit="add">
+                <div class="form-group">
+                    <label>将下面输入的文字放入todo list中！</label>
+                    <input type="text" ms-duplex="txt" class="form-control" autocomplete="off"/>
+                </div>
+            </form>
+            <p ms-if="todoList.size()>0">现有{{todoList.size()}}项todo list</p>
+            <ol>
+                <li ms-repeat="todoList">
+                    {{el}}
+                    <a href="javascript:void(0);" ms-click="$remove" class="todoDelete">x</a>
+                </li>
+            </ol>
+        </div>
+    </div>
+</div>
+<script src="../../libs/avalon.js"></script>
+<script src="../../js/test/example.avalon.js"></script>
+</body>
+</html>

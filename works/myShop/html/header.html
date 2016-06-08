@@ -1,0 +1,64 @@
+<div id="top">
+    <div id="con">
+					<span class="c" style="padding-left: 30px;"><a
+                            href="index.html">Gogo首页</a> </span>
+        <span>|</span>
+					<span class="c"><a href="user/showCar.html">我的购物车</a>
+					</span>
+        <span>|</span>
+					<span class="c"><a href="user/main.html">我的物品</a>
+					</span>
+					<span style="margin-left: 40px;"><font color="#00ff00"><span>{{userName}}</span>
+                    </font>欢迎光临Gogo商城！</span>
+						<span ms-if="userName==null"><strong style="color: #D369D7;"> [<a
+                                href="userEnrol.html" style="color: #D369D7;">注册</a>/<a
+                                href="usersLogin.html" style="color: #D369D7;" ms-click="fromPath()">登录</a>]</strong>
+						</span>
+						<span style="margin-left: 40px;" ms-if="userName!=null">
+						<input type="button" value="退出" style="color: #D369D7;" ms-click="logout()" class="dd"/>
+						</span>
+    </div>
+    <div id="logo">
+        <img style="float: left;" src="../images/index/logo.jpg"/>
+
+        <div id="beat">
+            <img style="float: left"
+                 src="../images/index/top_line2_search_01.gif"/>
+            <input id="searchName" type="text" name="goodName"/>
+            <input id="search" type="image" ms-click="search()" src="../images/index/top_line2_search_02.gif"/>
+        </div>
+        <div id="car">
+            <img style="float: left"
+                 src="../images/index/shop-left.jpg"/>
+            <img style="float: right"
+                 src="../images/index/shop-right.jpg"/>
+
+            <span style="color: #000000; margin-left: 10px;">购物车:</span>
+						<span style="color: #FF0000; font: bold" id="goodnum">{{number}}</span> 件商品
+						<span style="margin-left: 15px;"><a
+                                href="user/showCar.html" style="color: #FF0000;">去结算</a>
+						</span>
+        </div>
+    </div>
+    <div id="menu">
+        <img style="float: left" src="../images/index/menu-l.gif"/>
+        <img style="float: right" src="../images/index/menu-r.gif"/>
+        <ul>
+            <li>
+                <a href="index.html"><b>首页</b> </a>
+            </li>
+
+            <li class="img">
+                <img style="float: left;" src="../images/index/split.jpg"/>
+            </li>
+           <div ms-repeat="categoryList" ms-if-loop="$index<6">
+                <li>
+                    <a ms-href="more.html?id={{el.id}}" class="c"><b>{{el.name}}</b> </a>
+                </li>
+                <li class="img">
+                    <img style="float: left;" src="../images/index/split.jpg"/>
+                </li>
+           </div>
+        </ul>
+    </div>
+</div>

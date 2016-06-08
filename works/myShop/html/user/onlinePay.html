@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <!-- InstanceBeginEditable name="doctitle" -->
+    <title>Gogo商场</title>
+    <!-- InstanceEndEditable -->
+    <link href="../../css/index/index.css" rel="stylesheet"
+          type="text/css"/>
+    <link href="../../css/users/onlinePay.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="../../libs/jquery/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="../../libs/avalon.js"></script>
+    <script type="text/javascript" src="../../js/user/common.js"></script>
+    <script type="text/javascript" src="../../js/user/onlinePay.js"></script>
+    <!-- InstanceEndEditable -->
+</head>
+
+<body>
+<div style="width:980px; margin:0px auto;">
+    <div ms-controller="header" ms-include-src="'header.html'"></div>
+
+    <div id="mid" style="margin-bottom:20px;" ms-controller="onlinePayModel">
+        <div style="margin:30px 0px; ">
+            <img src="../../images/car/navigationover.jpg"/>
+        </div>
+        <div id="showCar">
+            <h1 style="font-size:14px; color:#000000;">
+                您的订单已生成
+            </h1>
+
+            <div id="forderInfo">
+                <p>
+                    <span>订 单 号：</span><span>{{order.id}}</span>
+                </p>
+
+                <p>
+                    <span>收 货 人：</span><span>{{order.name}}</span>
+                </p>
+
+                <p>
+                    <span>送货地址：</span><span>{{order.address}}</span>
+                </p>
+
+                <p>
+                    <span>邮政编码：</span><span>{{order.post}}</span>
+                </p>
+
+                <p>
+                    <span>联系方式：</span><span>{{order.phone}}</span>
+                </p>
+
+                <p>
+                    <span>待支付金额：</span><span>{{order.total}}</span>
+                </p>
+            </div>
+            <div id="pay">
+                <b>支付方式：</b>
+                <img src="../../images/car/alipay.png"/>
+                <span>* 默认选中支付宝。</span>
+						<span style="margin-left:40px;color:#0077FF;"><a href="#" style="color:#0077FF;">如何使用?</a>
+						</span>
+                <p style="clear:both"></p>
+            </div>
+            <div>
+                <h1
+                        style="font-size:14px; color:#000000; margin-top:10px; background-image:url(../../images/car/top-bg.jpg); height:36px;">
+                    <img style="float:left" src="../../images/car/top-left.jpg"/>
+                    <b
+                            style="float:left;font-size:14px; color:#000000; margin-top:12px; margin-left:-15px;">请选择支付银行</b>
+                    <img style="float:right" src="../../images/car/top-right.jpg"/>
+                </h1>
+
+                <div id="paybank" style="clear:both">
+                    <!-- 这里显示银行的Logo -->
+                    <table
+                            style="margin-left:120px; margin-bottom:15px; float:right">
+                        <tr>
+                            <td ms-repeat="logo" ms-if-loop="$index<4">
+                                <input type="radio" ms-click="checkedPay($index)" name="onpay.pd_FrpId"/>
+                                <img ms-src="../../image/logo/{{el}}-NET.gif" width="180"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td ms-repeat="logo" ms-if-loop="$index>3&&$index<8">
+                                <input type="radio" ms-click="checkedPay($index)" name="onpay.pd_FrpId"/>
+                                <img ms-src="../../image/logo/{{el}}-NET.gif" width="180"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td ms-repeat="logo" ms-if-loop="$index>7&&$index<12">
+                                <input type="radio" ms-click="checkedPay($index)" name="onpay.pd_FrpId"/>
+                                <img ms-src="../../image/logo/{{el}}-NET.gif" width="180"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td ms-repeat="logo"  ms-if-loop="$index>11&&$index<16">
+                                <input type="radio" ms-click="checkedPay($index)" name="onpay.pd_FrpId"/>
+                                <img ms-src="../../image/logo/{{el}}-NET.gif" width="180"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td ms-repeat="logo" ms-if-loop="$index>15&&$index<20">
+                                <input type="radio" ms-click="checkedPay($index)" name="onpay.pd_FrpId"/>
+                                <img ms-src="../../image/logo/{{el}}-NET.gif" width="180"/>
+                            </td>
+                        </tr>
+                    </table>
+                    <!-- 这里显示银行的Logo结束 -->
+                    <div>
+                        <img style="float:left" src="../../images/car/!.JPG"/>
+                        <span>请确保您的银行卡（不支持存折）已经在银行柜台开通了网上支付功能，否则将无法支付成功</span>
+									<span style="margin-left:30px;"><a href="#"
+                                                                       style="color:#0077FF;">如何开通?</a>
+									</span>
+
+                        <div style="clear:both"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="goPay" style="padding-right:9px;">
+                <input type="button" id="sub" value=" " ms-click="addPayWay()"/>
+            </div>
+        </div>
+    </div>
+    <div ms-controller="footer" ms-include-src="'footer.html'"></div>
+</div>
+</body>
+</html>
+

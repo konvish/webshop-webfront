@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>无标题文档</title>
+    <link href="../../css/index/index.css" rel="stylesheet" type="text/css"/>
+    <link href="../../css/users/usersInfo.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="../../js/area.js"></script>
+    <script type="text/javascript" src="../../js/validate/jquery.js"></script>
+    <script type="text/javascript" src="../../js/validate/jquery.validate.js"></script>
+    <script type="text/javascript" src="../../libs/avalon.js"></script>
+    <script type="text/javascript" src="../../js/user/common.js"></script>
+    <script type="text/javascript" src="../../js/user/userInfo.js"></script>
+</head>
+
+<body>
+<div id="right" style="width:780px; margin-bottom:10px;" ms-controller="userInfoModel">
+    <div style="background-image:url(../../images/users/xiangxi-center-top.jpg);background-repeat:repeat-x;height:8px;clear:both">
+        <img style="float:left" src="../../images/users/xiangxi-left-top.jpg"/>
+        <img style="float:right" src="../../images/users/xiangxi-right-top.jpg"/>
+
+        <div style="clear:both"></div>
+    </div>
+    <div style="background-image:url(../../images/users/Snap5.jpg);background-repeat:repeat-y;padding-bottom:30px;">
+        <div id="xinxi">
+            <h1 style="border-bottom:2px solid #cccccc;">
+                <span style="border-bottom:2px solid #FF0000;font-size:14px">编辑个人资料</span>
+            </h1>
+
+            <p>帮助我们完善您的个人信息，有助于我们未来根据您的情况提供更加个性化的服务；Gogo商城会对您的个人隐私资料加以保密。</p>
+
+            <div class="bo">
+                <label>真实姓名：</label>
+                <input type="text" size="20" name="name" id="name" maxlength="10"
+                       value=""/>
+            </div>
+            <div class="bo">
+                <label>性别：</label>
+                <select size="20" name="sex" id="sex">
+                    <option id="1" selected="selected" value="1">男</option>
+                    <option id="2" value="2">女</option>
+                    <option id="0" value="0">其他</option>
+                </select>
+            </div>
+            <div class="bo">
+                <label>生日：</label>
+                <input type="text" size="30" name="birthday" id="birthday" maxlength="20"
+                       value=""/>
+                <span></span>
+            </div>
+            <div class="bo">
+                <label>所在省市：</label>
+                <select name=selectp id="selectp" onchange="selectcityarea('selectp','selectc','myform');">
+                    <option selected id="index" value=""></option>
+                </select>
+                <select name=selectc>
+                    <option selected id="default" value=""></option>
+                </select>
+
+            </div>
+            <div class="bo">
+                <label>详细地址：</label>
+                <input type="text" size="30" name="address" id="address" maxlength="10" value=""/>
+                <span></span>
+            </div>
+            <div class="bo">
+                <label>民族：</label>
+                <input type="text" size="30" name="nation" id="nation" maxlength="10"
+                       value=""/>
+                <span></span>
+            </div>
+            <div class="bo">
+                <label>国家：</label>
+                <input type="text" size="30" name="country" id="country" maxlength="10"
+                       value=""/>
+                <span></span>
+            </div>
+            <div class="bo">
+                <input type="button" id="sub" ms-click="modifyUser()" value="保存"/>
+            </div>
+        </div>
+        <script language=javascript>
+            first("selectp", "selectc", "myform", 0, 0);
+        </script>
+        <div style="clear:both"></div>
+    </div>
+    <div style="background-image:url(../../images/users/xiangxi-center-bot.jpg);background-repeat:repeat-x;height:8px;clear:both">
+        <img style="float:left" src="../../images/users/xiangxi-left-bot.jpg"/>
+        <img style="float:right" src="../../images/users/xiangxi-right-bot.jpg"/>
+
+        <div style="clear:both"></div>
+    </div>
+</div>
+</body>
+</html>
+

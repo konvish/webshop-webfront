@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>infoAddress</title>
+    <!--
+<link rel="stylesheet" type="text/css" href="styles.css">
+-->
+    <script type="text/javascript" src="../js/jquery.js"></script>
+    <script type="text/javascript" src="../libs/avalon.js"></script>
+    <script type="text/javascript" src="../js/infoaddress.js"></script>
+</head>
+
+<body ms-controller="addressInfoModel">
+<style type="text/css">
+    #tab span, label {
+        padding-left: 15px;
+
+    }
+
+    body {
+        font-size: 12px;
+    }
+</style>
+<table width="527" border="0" id="tab" cellpadding="0"
+       cellspacing="5">
+    <tr>
+        <th colspan="4" style="font-size:16px; color:#00CCCC;">
+            请核对您的送货地址，如有误请重新选择
+        </th>
+    </tr>
+    <tr>
+        <td>
+            <label>
+                所 属&nbsp; 省 份：
+            </label>
+        </td>
+        <td>
+            <table border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td width="122">
+                        <select name="selectp" onchange="onChangeAreasId()" id="selectp">
+                            <option ms-repeat="areaList" value="{{el.id}}">
+                                {{el.name}}
+                            </option>
+                        </select>
+                    </td>
+                    <td width="192">
+                        <label>
+                            所在城市：
+                        </label>
+                        <select name=selectc style="width:100px;" id="selectc">
+                            <option value="{{el.id}}" ms-repeat="secondList">
+                                {{el.name}}
+                            </option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <label>
+                街 道&nbsp; 地 址：
+            </label>
+        </td>
+        <td>
+            <textarea rows="3" cols="33"></textarea>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <label>
+                邮 政&nbsp; 编 码：
+            </label>
+        </td>
+        <td>
+            <input type="text" name="upost" id="upost"/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <label>
+                常 用 E-mail：
+            </label>
+        </td>
+        <td>
+            <input type="text" name="uemail" id="uemail"/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <label>
+                收 货 人姓名：
+            </label>
+        </td>
+        <td>
+            <input type="text" name="name" id="name"/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <label>
+                联 系&nbsp; 电 话：
+            </label>
+        </td>
+        <td>
+            <input type="text" name="phone" id="phone"/>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" align="center">
+            <input type="submit" value="确定" style="margin-right:30px;"/>
+            <input class="off" type="button" value="关闭"/>
+        </td>
+    </tr>
+</table>
+</body>
+</html>

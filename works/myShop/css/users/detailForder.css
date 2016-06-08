@@ -1,0 +1,89 @@
+* {
+    margin: 0px;
+    font-size: 12px;
+    color: #666666;
+}
+
+* {
+    margin: 0px;
+    font-size: 12px;
+    color: #666666;
+}
+
+#users .border {
+    width: 7px;
+    height: 100px;
+    background-repeat: repeat-y;
+}
+
+#users #use {
+    float: left;
+}
+
+#users #use p {
+    margin: 20px 0px 10px 12px;
+}
+
+.dingdan {
+    background-image: url(../../images/users/users-mid.jpg);
+    height: 100px;
+    padding: 10px;
+}
+
+.dingdan p {
+    border-bottom: 1px dashed #cccccc;
+    margin-bottom: 6px;
+    padding-left: 20px;
+    padding-bottom: 6px;
+}
+
+.dingdan p a {
+    color: #000000;
+}
+
+#xinxi {
+    padding: 15px;
+}
+
+#xinxi p {
+    margin: 8px 0px;
+}
+
+#xinxi table td {
+    height: 25px;
+    text-align: center;
+    border-bottom: 1px solid #E5E5E5;
+    border-right: 1px solid #E5E5E5;
+}
+
+.xinxi1 {
+    padding: 15px;
+}
+
+.xinxi1 div p {
+    margin: 8px 14px;
+}
+
+.xinxi1 div p span {
+    margin-right: 5px;
+}
+
+#ForderGood {
+    border: 1px solid #cccccc;
+    margin: 15px;
+    margin-bottom: 0px;
+    padding: 15px;
+}
+
+#ForderGood table td {
+    height: 25px;
+    text-align: center;
+    line-height: 25px;
+    border-bottom: 1px solid #E5E5E5;
+}
+
+#ForderGood #monery p {
+    text-align: right;
+    margin-top: 10px;
+    margin-right: 5px;
+}

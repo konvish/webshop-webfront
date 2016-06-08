@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>无标题文档</title>
+    <link href="../../css/index/index.css" rel="stylesheet" type="text/css" />
+    <link href="../../css/users/left.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="../../libs/jquery/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="../../libs/avalon.js"></script>
+    <script type="text/javascript" src="../../js/user/common.js"></script>
+    <script type="text/javascript" src="../../js/user/left.js"></script>
+</head>
+
+<body>
+<div id="left" style="width:180px;" ms-controller="leftModel">
+    <div>
+        <div style="background-image:url(../../images/users/top.jpg); width:180px; height:35px;">
+            <h4 style="color:#990000; font-size:14px; padding:6px 0px 0px 22px;">{{userName}}</h4>
+        </div>
+        <div id="users">
+            <div class="border" style="background-image:url(../../images/users/left.jpg); float:left;"></div>
+            <div id="use">
+                <p>您好！欢迎光临Gogo商城！</p>
+                <p>您现在是：<span style="color:#990000;">普通会员</span></p>
+            </div>
+            <div class="border" style="background-image:url(../../images/users/right.jpg); float:right;"></div>
+        </div>
+        <div style="background-image:url(../../images/users/usersMan-bot-bg.jpg);background-repeat:repeat-x;height:11px;clear:both">
+            <img style="float:left" src="../../images/users/usersMan-bot-left.jpg" />
+            <img style="float:right" src="../../images/users/usersMan-bot-right.jpg" />
+            <div style="clear:both"></div>
+        </div>
+    </div>
+    <div style="margin:10px 0px;">
+        <div style="background-image:url(../../images/users/users-dingdan-Top.jpg); height:41px;"></div>
+        <div class="dingdan">
+            <p>
+                <span style="color:#990000; font-size:18px; margin-right:6px;">▪</span>
+                <a href="../user/userForder.html"  target="right">我的订单</a>
+            </p>
+            <p>
+                <span style="color:#990000; font-size:18px; margin-right:6px;">▪</span>
+                <a href="../user/test.html"  target="right">账户余额</a>
+            </p>
+            <p>
+                <span style="color:#990000; font-size:18px; margin-right:6px;">▪</span>
+                <a href="../user/privilege.html" target="right">我的优惠券</a>
+            </p>
+        </div>
+        <div style="background-image:url(../../images/users/users-bot.jpg);background-repeat:no-repeat;height:3px;"></div>
+    </div>
+    <div style="margin:10px 0px;">
+        <div style="background-image:url(../../images/users/users-info-Top.jpg); height:41px;"></div>
+        <div class="dingdan">
+            <p>
+                <span style="color:#990000; font-size:18px; margin-right:6px;">▪</span>
+                <a href="../user/alterPassword.html" target="right">修改密码</a>
+            </p>
+            <p>
+                <span style="color:#990000; font-size:18px; margin-right:6px;">▪</span>
+                <a href="../user/userInfo.html" target="right">编辑个人资料</a>
+            </p>
+        </div>
+        <div style="background-image:url(../../images/users/users-bot.jpg); background-repeat:no-repeat; height:3px;"></div>
+    </div>
+    <div style="margin:10px 0px;">
+        <div style="background-image:url(../../images/users/users-info-Top.jpg); height:41px;"></div>
+        <div class="dingdan" style="height:50px;">
+            <p>
+                <span style="color:#990000; font-size:18px; margin-right:6px;">▪</span>
+                <a href="javascript:void(0)"  target="_parent">退出管理</a>
+            </p>
+        </div>
+        <div style="background-image:url(../../images/users/users-bot.jpg); background-repeat:no-repeat; height:3px;"></div>
+    </div>
+</div>
+
+</body>
+</html>
+

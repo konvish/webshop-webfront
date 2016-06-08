@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+    <title>用户登录</title>
+    <link href="../css/index/login.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+<div id="login">
+
+    <div id="top">
+        <div id="top_left"><img src="../images/login/user.gif" /></div>
+        <div id="top_center" style="background-image:url(../images/login/userLogin.jpg);"></div>
+    </div>
+
+    <div id="center">
+        <div id="center_left"><img src="../images/login/login_09.jpg" /></div>
+        <div id="center_middle">
+            <form action="../usersAction_getUserss.action" method="post">
+                <div id="user">用 户
+                    <input type="text" name="users.ulogin" />
+                </div>
+                <div id="password">密   码
+                    <input type="password" name="users.upass" />
+                </div>
+                <div id="warn"><img src="../images/login/tip.gif" />请勿非法登陆！</div>
+                <div id="btn"><input type="submit" value="登录" /><input type="reset" value="清空" /></div>
+            </form>
+        </div>
+        <div id="center_right"></div>
+    </div>
+    <div id="down">
+        <div id="down_left">
+        </div>
+        <div id="down_center"></div>
+    </div>
+
+</div>
+</body>
+</html>

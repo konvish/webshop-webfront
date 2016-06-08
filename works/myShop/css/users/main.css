@@ -1,0 +1,61 @@
+* {
+    margin: 0px;
+    font-size: 12px;
+    color: #666666;
+}
+
+#maintable {
+    margin: 0px auto;
+}
+
+* {
+    margin: 0px;
+    font-size: 12px;
+    color: #666666;
+}
+
+#users .border {
+    width: 7px;
+    height: 100px;
+    background-repeat: repeat-y;
+}
+
+#users #use {
+    float: left;
+}
+
+#users #use p {
+    margin: 20px 0px 10px 12px;
+}
+
+.dingdan {
+    background-image: url(../../images/users/users-mid.jpg);
+    height: 100px;
+    padding: 10px;
+}
+
+.dingdan p {
+    border-bottom: 1px dashed #cccccc;
+    margin-bottom: 6px;
+    padding-left: 20px;
+    padding-bottom: 6px;
+}
+
+.dingdan p a {
+    color: #000000;
+}
+
+#xinxi {
+    padding: 15px;
+}
+
+#xinxi p {
+    margin: 8px 0px;
+}
+
+#xinxi table td {
+    height: 25px;
+    text-align: center;
+    border-bottom: 1px solid #E5E5E5;
+    border-right: 1px solid #E5E5E5;
+}

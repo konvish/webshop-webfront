@@ -1,0 +1,21 @@
+* {
+    margin: 0px;
+    font-size: 12px;
+    color: #666666;
+}.split span a {
+    margin-right: 20px;
+}
+
+* {
+    margin: 0px;
+    font-size: 12px;
+    color: #666666;
+}
+
+.border {
+    border: 1px dashed #ffffff;
+}
+
+.showBorder {
+    border: 1px dashed #FF0000;
+}

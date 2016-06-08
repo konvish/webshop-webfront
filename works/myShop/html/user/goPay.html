@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <!-- InstanceBeginEditable name="doctitle" -->
+    <title>Gogo商场</title>
+    <!-- InstanceEndEditable -->
+    <link href="../../css/index/index.css" rel="stylesheet" type="text/css"/>
+    <link href="../../css/users/goPay.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="../../libs/jquery/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="../../libs/avalon.js"></script>
+    <script type="text/javascript" src="../../js/user/common.js"></script>
+    <script type="text/javascript" src="../../js/user/goPay.js"></script>
+    <!-- InstanceEndEditable -->
+</head>
+
+<body>
+<div style="width:980px; margin:0px auto;">
+    <div ms-controller="header" ms-include-src="'header.html'"></div>
+
+    <!-- InstanceBeginEditable name="EditRegion3" -->
+    <div id="mid" style="margin-bottom:20px;" ms-controller="goPayModel">
+        <div id="okPay">
+            <div>
+                <h1 style="font-size:14px; color:#000000; margin-top:10px; background-image:url(../../images/car/top-bg.jpg); height:36px;">
+                    <img style="float:left" src="../../images/car/top-left.jpg"/>
+                    <b style="float:left;font-size:14px; color:#000000; margin-top:12px;">感谢您在Gogo商城购物</b>
+                    <img style="float:right" src="../../images/car/top-right.jpg"/>
+                </h1>
+            </div>
+            <div style="border-left:1px solid #D5D5D5; border-right:1px solid #D5D5D5">
+                <div class="forderInfo">
+                    <p><span>订 单 号：</span><b style="color:#990000">{{order.id}}</b>
+                        <span style="margin-left:10px;">[请您记下这个号码，以便在付款和查询订单时使用]</span>
+                    </p>
+
+                    <p><span>支付金额：</span><span style="color:#990000">{{order.total}}</span></p>
+
+                    <p ms-if="id==-1"><span style="float:left; margin-top:15px;">支付方式：</span>
+                        <span><img src="../../images/car/alipay.png"/></span>
+                    </p>
+
+                    <p ms-if="id!=-1"><span style="float:left; margin-top:10px;">支付银行：</span>
+                        <span><img ms-src="../../images/logo/{{payLogo}}.gif"/></span>
+                    </p>
+
+                    <p style="padding-left:12px;">
+                    </p>
+                </div>
+                <div class="forderInfo" style="border-top:1px dashed #cccccc; margin-top:20px; padding-left:200px">
+                    <p>* 您可以在“
+                        <a href="main.html" style="color:#0077FF;">我的Gogo</a>
+                        ”中查看或取消您的订单，由于系统将进行订单预处理，您可以不会立刻查询到刚提交的订单
+                    </p>
+
+                    <p>* 我们会在7天内为您保留您未支付的订单。请及时去“
+                        <a href="main.html" style="color:#0077FF;">我的Gogo</a>”完成支付
+                    </p>
+                </div>
+            </div>
+            <div>
+                <h1 style="background-image:url(../../images/car/bot-bg.jpg); height:36px;">
+                    <img style="float:left" src="../../images/car/bot-left.jpg"/>
+                    <img style="float:right" src="../../images/car/bot-right.jpg"/>
+                </h1>
+
+                <div style="clear:both"></div>
+            </div>
+        </div>
+    </div>
+    <!-- InstanceEndEditable -->
+    <div ms-controller="footer" ms-include-src="'footer.html'"></div>
+</div>
+</body>
+<!-- InstanceEnd --></html>

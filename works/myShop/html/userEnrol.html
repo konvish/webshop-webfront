@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Gogo商场用户注册</title>
+    <!-- InstanceEndEditable -->
+    <meta charset="UTF-8">
+    <link href="../css/index/index.css" rel="stylesheet"
+          type="text/css"/>
+    <link href="../css/userEnrol.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="../js/area.js"></script>
+    <script type="text/javascript" src="../js/validate/jquery.js"></script>
+    <script type="text/javascript" src="../js/public.js"></script>
+    <script type="text/javascript" src="../js/validate/jquery.validate.js"></script>
+    <script type="text/javascript" src="../libs/avalon.js"></script>
+    <script type="text/javascript" src="../js/common.js"></script>
+    <script type="text/javascript" src="../js/userEnrol.js"></script>
+</head>
+
+<body>
+<div style="width:980px; margin:0px auto;">
+    <div ms-controller="header" ms-include-src="'header.html'"></div>
+    <div id="register" ms-controller="userEnrolModel">
+        <div>
+            <img src="../images/register/title.gif"/>
+        </div>
+        <div>
+            <img src="../images/register/top.gif"/>
+        </div>
+        <div id="bg">
+            <div>
+                <label>
+                    用户昵称：
+                </label>
+                <input type="text" name="niName" id="niName" maxlength="12" ms-duplex="niName"/>
+                <span id="abc">用户名要在6~12位之间</span>
+            </div>
+            <div>
+                <label>
+                    用户密码：
+                </label>
+                <input type="password" name="password" id="password" ms-duplex="password"/>
+                <span>密码长度 6 ~ 16 位之间</span>
+            </div>
+            <div>
+                <label>
+                    确认密码：
+                </label>
+                <input type="password" name="password2" id="password2" ms-duplex="password2"/>
+                <span>重复输入以上的密码</span>
+            </div>
+            <div>
+                <label>
+                    通讯电话：
+                </label>
+                <input type="text" name="phone" pattern="[0-9]{11}" id="phone" ms-duplex="phone"/>
+                <span class="info">请填写11位手机号码</span>
+            </div>
+            <div>
+                <label>
+                    电子邮件：
+                </label>
+                <input type="text" name="email" id="email" ms-duplex="email"/>
+                <span>请填写正确的电子邮箱地址</span>
+            </div>
+            <div style="margin-bottom:0px;">
+                <input type="image" id="sub" src="../images/register/m_button_02.gif" ms-click="sub()"/>
+            </div>
+        </div>
+        <div>
+            <img src="../images/register/bottom.gif"/>
+        </div>
+    </div>
+    <div ms-controller="footer" ms-include-src="'footer.html'"></div>
+</div>
+</body>
+<!-- InstanceEnd -->
+</html>

@@ -1,0 +1,4 @@
+{
+  "baseUrl":"http://localhost:8089",
+  "getExCategory":"/category/getExCategory.do"
+}

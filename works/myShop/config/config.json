@@ -1,0 +1,39 @@
+{
+  "imagesUrl":"http://localhost:8080",
+  "code":"/rand/code.do",
+  "queryCategoryList":"/category/queryCategoryList.do",
+  "queryExCategoryByNodeLevel":"/category/queryExCategoryByNodeLevel.do",
+
+  "queryAdvertisement":"/advertisement/queryAdvertisementPage.do",
+
+  "queryCommodityList":"/commodity/queryCommoditySize.do",
+  "queryCommodityByType":"/commodity/queryCommodityPage.do",
+  "queryCommodity":"/commodity/getCommodity.do",
+
+  "addUser":"/user/addUser.do",
+  "login":"/user/login.do",
+  "alterPassword":"/user/alterPassword.do",
+  "queryUser":"/user/getUser.do",
+  "modifyUser":"/user/modifyUser.do",
+
+  "deleteShoppingCommodity":"/shoppingCart/deleteShoppingCommodity.do",
+  "queryShoppingCart":"/shoppingCart/queryShoppingCartByUserId.do",
+  "queryShoppingCartCommodity":"/shoppingCart/queryShoppingCartCommodity.do",
+  "deleteShoppingCartAll":"/shoppingCart/deleteShoppingCartAll.do",
+  "addShoppingCart":"/shoppingCart/addShoppingCart.do",
+
+  "queryAreas":"/areas/queryAreasByParentId.do",
+
+  "addCommodityList":"/orderCommodityList/addOrderCommodityList.do",
+  "orderCommodityList":"/orderCommodityList/queryOrderCommodityListByOrderId.do",
+
+  "queryUserArea":"/userArea/queryUserAreaAll.do",
+  "addUserArea":"/userArea/addUserArea.do",
+  "deleteUserArea":"/userArea/deleteUserArea.do",
+
+  "addOrder":"/order/addOrder.do",
+  "queryOrderOne":"/order/getOrder.do",
+  "modifyOrder":"/order/modifyOrder.do",
+  "getOrder":"/order/getOrderOne.do",
+  "queryOrderPage":"/order/queryOrderPage.do"
+}

@@ -1,0 +1,14 @@
+group 'com.kong'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'sonar-runner'
+
+task createREADME(){
+    file("README.md").createNewFile()
+}
+
+task installZip(type: Zip){
+    from('works')
+
+    into('./webshop-webfront/')
+}

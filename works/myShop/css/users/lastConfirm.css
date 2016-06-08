@@ -1,0 +1,127 @@
+* {
+    margin: 0px;
+    font-size: 12px;
+    color: #666666;
+}
+
+#xuanzhi span {
+    margin-left: 6px;
+}
+
+#digouren div {
+    margin: 10px 0px;
+}
+
+#showCar {
+    background-color: #F0F0F0;
+    border: 1px solid #D5D5D5;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+#showCar div {
+    background-color: #FFFFFF;
+    border: 1px solid #D5D5D5;
+    padding: 10px;
+}
+
+#showCar table {
+    border: 1px solid #D5D5D5;
+}
+
+#showCar table tr td {
+    border-bottom: 1px solid #D5D5D5;
+    /*border-right:1px solid #D5D5D5;*/
+    text-align: center;
+    height: 50px;
+}
+
+#showCar #title td {
+    height: 20px;
+    color: #000000;
+    font: bold
+}
+
+#showCar .ftotal {
+    margin-top: 10px;
+    text-align: right;
+    padding-right: 50px;
+    font-size: 14px;
+    font: bold;
+    color: #FF0000
+}
+
+#diz span {
+    padding-right: 8px;
+    color: #ff0000;
+}
+
+#showCar #sub {
+    background-image: url(../../images/car/buy.jpg);
+    width: 140px;
+    height: 28px;
+    border: 0px;
+}
+
+/*弹出层的STYLE*/
+/* html,body {height:100%; margin:0px; font-size:12px;} */
+html,body{ font-size:14px; font-family: Arial,Microsoft YaHei; color:#5d5d5d; overflow-x:hidden; width:100%; background:#f4f4f4; }
+
+.win_box { width:500px; position:absolute; left:30%; top:30%; border:1px solid #ddd; border-radius:3px; box-shadow:1px 1px 2px #ccc; background:#f8f8f9}
+.win_box .win_top{ border-bottom:1px solid #ddd; position:relative; height:34px;}
+.win_box .win_top .ico_close{ position:absolute; top:8px; right:10px; width:17px; height:17px; background:url(../images/ico_close.png) no-repeat center; }
+.win_box .win_con{ padding:40px; min-height:100px}
+.win_box .center { text-align:center}
+
+
+.win_box .btn_c{ margin-top:20px;}
+.win_box .btn_c button{ border-radius:3px; background:#40b386; border:1px solid #40b386; color:#fff; width:150px; height:22px; margin-right:10px;}
+.win_box .short_btn button{ width:80px;}
+.win_box .btn_c .green_btn{ background:#40b386; color:#fff;}
+.win_box .btn_c .white_btn{ background:#fff; color:#40b386;}
+
+.mask_box {
+    background:rgba(0,0,0,0.4);
+    line-height: 40px;
+    font-size: 12px;
+    font-weight: bold;
+    z-index:99;
+    width: 100%;
+    height: 100%;
+    left:11.5%;/*FF IE7*/
+    top: 6%;/*FF IE7*/
+
+    margin-left:-150px!important;/*FF IE7 该值为本身宽的一半 */
+    margin-top:-60px!important;/*FF IE7 该值为本身高的一半*/
+
+    margin-top:0px;
+
+    position:fixed!important;/*FF IE7*/
+    position:absolute;/*IE6*/
+    _top:       expression(eval(document.compatMode &&
+            document.compatMode=='CSS1Compat') ?
+            documentElement.scrollTop + (document.documentElement.clientHeight-this.offsetHeight)/2 :/*IE6*/
+            document.body.scrollTop + (document.body.clientHeight - this.clientHeight)/2);/*IE5 IE5.5*/
+
+}
+
+.bg {
+    background-color: #ccc;
+    width: 100%;
+    height: 100%;
+    left:0;
+    top:0;/*FF IE7*/
+    filter:alpha(opacity=50);/*IE*/
+    opacity:0.5;/*FF*/
+    z-index:1;
+
+    position:fixed!important;/*FF IE7*/
+    position:absolute;/*IE6*/
+
+    _top:       expression(eval(document.compatMode &&
+            document.compatMode=='CSS1Compat') ?
+            documentElement.scrollTop + (document.documentElement.clientHeight-this.offsetHeight)/2 :/*IE6*/
+            document.body.scrollTop + (document.body.clientHeight - this.clientHeight)/2);/*IE5 IE5.5*/
+
+}
+/*The END*/

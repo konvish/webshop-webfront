@@ -1,0 +1,53 @@
+@charset "utf-8";
+
+.bit{background-image:url(/shopping/images/detailGood/bit-bg.jpg)}
+#drop{float:left; width:200px}
+#drop #dropMid{
+	border:1px solid #D5D5D5;
+	background-color:#EEF7FE;
+	height:456px;
+	padding-top:35px;
+}
+#imglist{width:86px;}
+#imglist span{margin-left:24px;}
+#micpic{border:1px solid #CCCCCC; width:85px;}
+#micpic ul{list-style:none; margin:0px; padding:0px;}
+#micpic ul li img{width:75px; height:78px; margin:5px;}
+.hover{background-color:#cccccc}
+.cli{background-color:#A52423}
+
+
+#show{float:left;
+margin-left:17px; width:740px; border:1px solid #D5D5D5;}
+#show #showMid{border-left:1px solid #D5D5D5; border-right:1px solid #D5D5D5; background-color:#EEF7FE; width:739px;}
+#picshow{float:left; margin-right:20px; margin-left:10px;}
+#goodinfo{float:right; width:275px; margin-right:10px;}
+#goodinfo table td{
+	height:50px;
+	line-height:50px;
+}
+#goodinfo .index{text-align:right}
+#goodinfo .info{text-align:center}
+#goodinfo .title{
+	height:60px;
+	line-height:60px;
+	text-align:center;
+	border-bottom:1px dashed #cc0000;
+}
+
+#detailMid{ 
+	background-color:#EEF7FE;
+	color:#616266
+}
+#detailMid h1{
+	padding-left:30px;
+	padding-top:10px;
+	font-size:14px;
+}
+#detail{
+	border:1px solid #D5D5D5;
+}
+#detailMid p{
+	padding:8px 10px 8px 50px;
+	line-height:24px;
+}

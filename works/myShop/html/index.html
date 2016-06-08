@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Gogo商场经典首页</title>
+    <meta charset="UTF-8">
+    <link href="../css/index/index.css" rel="stylesheet"
+          type="text/css"/>
+    <link href="../css/idangerous.swiper.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="../js/public.js"></script>
+    <script type="text/javascript" src="../js/jquery.js"></script>
+    <script type="text/javascript" src="../js/users.js"></script>
+    <script type="text/javascript" src="../libs/avalon.js"></script>
+    <script type="text/javascript" src="../js/common.js"></script>
+    <script type="text/javascript" src="../js/index/index.js"></script>
+    <script type="text/javascript" src="../js/idangerous.swiper.min.js"></script>
+    <!-- InstanceEndEditable -->
+</head>
+
+<body>
+<div style="width: 980px; margin: 0px auto;">
+    <div ms-controller="header" ms-include-src="'header.html'"></div>
+
+    <!-- InstanceBeginEditable name="EditRegion3" -->
+    <div id="mid" style="margin: 5px 0px;" ms-controller="indexModel">
+        <div id="left">
+            <div id="cell">
+                <div class="small"
+                     style="background-image: url(../images/index/bg-top.jpg);">
+                    <img style="float: left"
+                         src="../images/index/top-left.jpg"/>
+							<span
+                                    style="float: left; font-size: 14px; font: bold; color: #D62762; padding-top: 8px;">热点类别</span>
+                    <img style="float: right"
+                         src="../images/index/top-right.jpg"/>
+                </div>
+                <!-- 一个品牌的循环开始  循环3次-->
+                <div class="pinpai" ms-repeat="secondCategoryList" ms-if-loop="$index<3">
+                    <h2 style="font-size: 14px; color: #FF0000">
+                        {{el.name}}
+                    </h2>
+                    <!-- 这里面显示一个品牌的商品型号    循环3次 -->
+                    <p>
+                        <a ms-href="more.html?id={{el.id}}" ms-repeat="el.categoryList" ms-if-loop="$index<3">{{el.name}}<span>|</span></a>
+                        <a ms-href="more.html?id={{el.id}}" ms-repeat="el.categoryList" ms-if-loop="$index==3">{{el.name}}</a>
+                    </p>
+
+                    <!--<p>-->
+                    <!--<a ms-href="detailGood.html?id=el.id" ms-repeat="el.categoryList"-->
+                    <!--ms-if-loop="$index>3 && $index<7">{{el.name}}</a><span>|</span>-->
+                    <!--<a ms-href="detailGood.html?id=el.id" ms-repeat="el.categoryList" ms-if-loop="$index==7">{{el.name}}</a>-->
+                    <!--</p>-->
+
+                    <!--<p>-->
+                    <!--<a ms-href="detailGood.html?id=el.id" ms-repeat="el.categoryList"-->
+                    <!--ms-if-loop="$index>7 && $index<11">{{el.name}}</a><span>|</span>-->
+                    <!--<a ms-href="detailGood.html?id=el.id" ms-repeat="el.categoryList" ms-if-loop="$index==11">{{el.name}}</a>-->
+                    <!--</p>-->
+                </div>
+
+                <div class="small"
+                     style="background-image: url(../images/index/mid-bg.jpg);">
+                    <img style="float: left"
+                         src="../images/index/mid-left.jpg"/>
+                    <img style="float: right"
+                         src="../images/index/mid-right.jpg"/>
+                </div>
+                <div style="clear: both"></div>
+            </div>
+            <div id="cell">
+                <div class="small"
+                     style="background-image: url(../images/index/bg-top.jpg);">
+                    <img style="float: left"
+                         src="../images/index/top-left.jpg"/>
+							<span
+                                    style="float: left; font-size: 14px; font: bold; color: #D62762; padding-top: 8px;">商品分类</span>
+                    <img style="float: right"
+                         src="../images/index/top-right.jpg"/>
+                </div>
+                <div class="pinpai" ms-repeat="secondCategoryList" ms-if-loop="$index<3">
+                    <h2 style="font-size: 14px; color: #FF0000">
+                        {{el.name}}
+                    </h2>
+                    <!-- 这里面显示一个品牌的商品型号    循环3次 -->
+                    <p>
+                        <a ms-href="more.html?id={{el.id}}" ms-repeat="el.categoryList" ms-if-loop="$index<3">{{el.name}}<span>|</span></a>
+                        <a ms-href="more.html?id={{el.id}}" ms-repeat="el.categoryList" ms-if-loop="$index==3">{{el.name}}</a>
+                    </p>
+
+                    <!--<p>-->
+                    <!--<a ms-href="detailGood.html?id=el.id" ms-repeat="el.categoryList"-->
+                    <!--ms-if-loop="$index>3 && $index<7">{{el.name}}</a><span>|</span>-->
+                    <!--<a ms-href="detailGood.html?id=el.id" ms-repeat="el.categoryList" ms-if-loop="$index=7">{{el.name}}</a>-->
+                    <!--</p>-->
+
+                    <!--<p>-->
+                    <!--<a ms-href="detailGood.html?id=el.id" ms-repeat="el.categoryList"-->
+                    <!--ms-if-loop="$index>7 && $index<11">{{el.name}}</a><span>|</span>-->
+                    <!--<a ms-href="detailGood.html?id=el.id" ms-repeat="el.categoryList" ms-if-loop="$index=11">{{el.name}}</a>-->
+                    <!--</p>-->
+                </div>
+                <div class="small"
+                     style="background-image: url(../images/index/mid-bg.jpg);">
+                    <img style="float: left"
+                         src="../images/index/mid-left.jpg"/>
+                    <img style="float: right"
+                         src="../images/index/mid-right.jpg"/>
+                </div>
+                <div style="clear: both"></div>
+            </div>
+            <div style="height: 115px;">
+                <img style="margin-bottom: 6px;"
+                     src="../images/show/t_100723_03.jpg" width="177"/>
+                <img style="margin-bottom: 6px;"
+                     src="../images/show/wanjuji_0715.jpg" width="177"/>
+            </div>
+            <div>
+                <div class="small"
+                     style="background-image: url(../images/index/bg-top.jpg);">
+                    <img style="float: left"
+                         src="../images/index/top-left.jpg"/>
+							<span
+                                    style="float: left; font-size: 14px; font: bold; color: #D62762; padding-top: 8px;">Gogo公告</span>
+                    <img style="float: right"
+                         src="../images/index/top-right.jpg"/>
+                </div>
+                <div class="pinpai" style="height: 151px;">
+                    <!-- 这里是商城的公告  循环5次 -->
+                    <p>
+                        <a href="#">Gogo 购物论坛</a>
+                    </p>
+
+                    <p>
+                        <a href="#">如何能够买到您想要的商品</a>
+                    </p>
+
+                    <p>
+                        <a href="#">查看购物中的注意事项</a>
+                    </p>
+
+                    <p>
+                        <a href="#">购物完成后的退货事项</a>
+                    </p>
+
+                    <p>
+                        <a href="#">欢迎您的下次购物</a>
+                    </p>
+                </div>
+                <div class="small"
+                     style="background-image: url(../images/index/mid-bg.jpg);">
+                    <img style="float: left"
+                         src="../images/index/mid-left.jpg"/>
+                    <img style="float: right"
+                         src="../images/index/mid-right.jpg"/>
+                </div>
+            </div>
+        </div>
+        <div id="right">
+            <div class="rightbox" style="float:right;margin-right:4px;width:220px;height:258px">
+                <table>
+                    <tr>
+                        <td>
+                            <a href="#"> <img style="float: left" alt="人人都是设计师"
+                                              src="../image/ddd.png"/>
+
+                                <h3>
+                                    下一季流行什么
+                                </h3>
+
+                                <p>
+                                    人人都是设计师
+                                </p></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="#"><img style="float: left"
+                                             src="../image/3334.jpg" alt="每周两团，期期精彩" height="48"
+                                             width="48"/>
+
+                                <h3>
+                                    团购
+                                </h3>
+
+                                <p>
+                                    每周两团，期期精彩
+                                </p></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="#"><img style="float: left"
+                                             src="../image/332.jpg" alt="我们都有公主病" height="48"
+                                             width="48"/>
+
+                                <h3>
+                                    星探有约
+                                </h3>
+
+                                <p>
+                                    我们都有公主病
+                                </p></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="#"> <img style="float: left" alt="穿衣服可以看出气质"
+                                              src="../image/3335.jpg" height="48" width="48"/>
+
+                                <h3>
+                                    今天我最潮
+                                </h3>
+
+                                <p>
+                                    穿衣服可以看出气质
+                                </p></a>
+                        </td>
+                    </tr>
+                    <!--<tr>-->
+                        <!--<td>-->
+                            <!--<a href="#"> <img style="float: left" alt="我是混搭女王"-->
+                                              <!--src="../image/32.jpg" height="48" width="48"/>-->
+
+                                <!--<h3>-->
+                                    <!--衣服是我的一半-->
+                                <!--</h3>-->
+
+                                <!--<p>-->
+                                    <!--我是混搭女王-->
+                                <!--</p></a>-->
+                        <!--</td>-->
+                    <!--</tr>-->
+                </table>
+            </div>
+            <div style="margin-bottom: 5px;">
+                <!--<div><img style="float: left; margin-right: 4px;" class="log" width="566"-->
+                        <!--height="258" id="1" ms-src="el.adPic" ms-repeat="advertisementList"/>-->
+                <!--&lt;!&ndash;<img style="float: left; margin-right: 4px;" class="log"&ndash;&gt;-->
+                     <!--&lt;!&ndash;width="566" height="258" id="2" src="../image/22.jpg"/>&ndash;&gt;-->
+                <!--&lt;!&ndash;<img style="float: left; margin-right: 4px;" class="log"&ndash;&gt;-->
+                     <!--&lt;!&ndash;width="566" height="258" id="3" src="../image/44.jpg"/>&ndash;&gt;-->
+                <!--&lt;!&ndash;<img style="float: left; margin-right: 4px;" class="log"&ndash;&gt;-->
+                     <!--&lt;!&ndash;width="566" height="258" id="4" src="../image/33.jpg"/>&ndash;&gt;-->
+
+                <!--</div>-->
+                <div class="swiper-container" id="ad">
+                    <div class="swiper-wrapper" >
+                        <div class="swiper-slide"  ms-repeat="advertisementList" ms-if-loop="$index<5"><img ms-src="{{imagesUrl}}{{el.adPic}}" width="566" height="258"></div>
+                    </div>
+                </div>
+
+                <div class="banner_pre_next">
+                    <a href="javascript:;" class="banner_btn_left">上一个</a>
+                    <a href="javascript:;" class="banner_btn_right">下一个</a>
+                </div>
+            </div>
+
+            <div class="context">
+                <!-- 从这里开始，显示一个类别的信息，-->
+                <div class="contextTop">
+                    <img style="float: left"
+                         src="../images/index/top-left.jpg"/>
+                    <b><span
+                            style="float: left; font-size: 15px; font: bold; color: #D62762;">商品列表</span>
+                    </b>
+                    <img style="float: right"
+                         src="../images/index/top-right.jpg"/>
+								<span style="float: right;"><a href="more.html">更多新品!详情请点击</a> </span>
+                </div>
+                <div class="contextMid">
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+
+                        <tr>
+                            <!-- 一个商品的显示  循环5次 -->
+                            <td ms-repeat="commodityList" ms-if-loop="$index<4">
+                                <table width="100%" border="0" cellspacing="0"
+                                       cellpadding="0" class="show">
+                                    <tr>
+                                        <td>
+                                            <a ms-href="detailGood.html?id={{el.id}}"><img ms-src="{{imagesUrl}}{{el.pic.split(',')[0]}}" height="50" width="500"/> </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center">
+                                            {{el.name}}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center" style="text-decoration: line-through">
+                                            市场价{{el.price+50}}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center" style="font: bold; color: #FF3300">
+                                            现价{{el.price}}
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <!-- 一个商品显示结束 -->
+                        </tr>
+
+                        <tr>
+                            <!-- 一个商品的显示  循环5次 -->
+                            <td ms-repeat="commodityList" ms-if-loop="$index>3 && $index<8">
+                                <table width="100%" border="0" cellspacing="0"
+                                       cellpadding="0" class="show">
+                                    <tr>
+                                        <td>
+                                            <a ms-href="detailGood.html?id={{el.id}}"><img ms-src="{{imagesUrl}}{{el.pic.split(',')[0]}}" height="50" width="500"/> </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center">
+                                            {{el.name}}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center" style="text-decoration: line-through">
+                                            市场价{{el.price+50}}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center" style="font: bold; color: #FF3300">
+                                            现价{{el.price}}
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <!-- 一个商品显示结束 -->
+                        </tr>
+
+                        <tr>
+                            <!-- 一个商品的显示  循环5次 -->
+                            <td ms-repeat="commodityList" ms-if-loop="$index>7 && $index<12">
+                                <table width="100%" border="0" cellspacing="0"
+                                       cellpadding="0" class="show">
+                                    <tr>
+                                        <td>
+                                            <a ms-href="detailGood.html?id={{el.id}}"><img ms-src="{{imagesUrl}}{{el.pic.split(',')[0]}}" height="50" width="500"/> </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center">
+                                            {{el.name}}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center" style="text-decoration: line-through">
+                                            市场价{{el.price+50}}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center" style="font: bold; color: #FF3300">
+                                            现价{{el.price}}
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <!-- 一个商品显示结束 -->
+                        </tr>
+
+                    </table>
+
+                </div>
+            </div>
+            <div class="contextBot">
+                <img style="float: left" src="../images/index/mid-left.jpg"/>
+                <img style="float: right"
+                     src="../images/index/mid-right.jpg"/>
+            </div>
+            <!-- 到这里一个类别的结束 -->
+        </div>
+    </div>
+</div>
+<!-- InstanceEndEditable -->
+<div ms-controller="footer" ms-include-src="'footer.html'"></div>
+
+<div style="position: absolute; top: 394px; left: 778px;" id="btn">
+</div>
+<script>
+
+    var LunBo = function(){
+
+        var ad = new Swiper('#ad',{
+            autoplay:10000,
+            autoplayDisableOnInteraction:false
+        });
+
+        $('.banner_btn_left').click(function(){ad.swipePrev();})
+        $('.banner_btn_right').click(function(){ad.swipeNext();})
+    }
+
+    $(function(){
+        setTimeout("LunBo()", 1600);
+    });
+
+
+
+</script>
+</body>
+<!-- InstanceEnd -->
+</html>

@@ -1,0 +1,21 @@
+{
+  "bizData": {
+    "conditions": {},
+    "page":1,
+    "pageSize":10,
+    "records":2,
+    "rows":[{
+      "id":20,
+      "createDate":1448871443978,
+      "creator":"0",
+      "lastModDate": 1448871421188,
+      "lastModifier": "0",
+      "name":"资源1",
+      "keyword":"标签1",
+      "synopsis":"测试数据"
+    }],
+    "total":1
+  },
+  "msg":"实例",
+  "rtnCode":"0000000"
+}

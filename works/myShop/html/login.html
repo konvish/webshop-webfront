@@ -1,0 +1,34 @@
+<div id="popDiv" class="mask_box" style="display:none;">
+    <div class="head_warp">
+        <div class="logo_box">
+            |&nbsp;&nbsp;&nbsp;电子商城管理平台
+        </div>
+    </div>
+    <div class="top_warp" ms-controller="loginModule">
+        <div class="top_box">
+            <div class="top_l_adv">
+                <h2><b></b></h2>
+
+                <h3></h3>
+            </div>
+            <div class="top_r_log">
+                <form class="login" id="loginForm" name="loginForm">
+                    <h3>欢迎使用管理平台</h3>
+
+                    <div><input name="" id="account" name="account" ms-model="account" type="text" class="login_user"
+                                placeholder="账号"/></div>
+                    <div><input name="" id="password" name="password" ms-model="password" type="password"
+                                class="login_pass" placeholder="密码"/></div>
+                    <div>
+                        <input type="text" id="randCode" name="randCode" class="login_code" placeholder="验证码"/>
+                        <img id="img" src="/rand/code.do" title="更换验证码"/>
+                        <a href="javascript:void(0)" onClick="refreshRand()">换一张</a>
+
+                    </div>
+                    <div><a class="b_login" href="javascript:void(0);" ms-click="closeDiv()">登录</a></div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="bg" class="bg" style="display:none;"></div>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <!-- InstanceBeginEditable name="doctitle" -->
+    <title>Gogo商场商品展示</title>
+    <!-- InstanceEndEditable -->
+    <link href="../css/index/index.css" rel="stylesheet" type="text/css"/>
+    <style type="text/css">
+        * {
+            margin: 0px;
+            font-size: 12px;
+            color: #666666;
+        }
+    </style>
+    <!-- InstanceBeginEditable name="head" -->
+    <link href="../css/index/detailGood.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" type="text/css" href="../css/index/jqzoom.css"/>
+    <script type="text/javascript" src="../js/jquery.js"></script>
+    <script type="text/javascript" src="../js/detailGood/jQuery-1.3.2.js"></script>
+    <script type="text/javascript" src="../js/detailGood/jCarouselLite_1.0.1.min.js"></script>
+    <script type="text/javascript" src="../js/detailGood/jquery.mousewheel.js"></script>
+    <script type="text/javascript" src="../js/detailGood/jquery.magnify-1.0.2.js"></script>
+    <script type="text/javascript" src="../js/detailGood/jquery.jqzoom1.0.2.js"></script>
+    <script type="text/javascript" src="../js/detailGood/jquery.jcarousel.js"></script>
+    <script type="text/javascript" src="../libs/avalon.js"></script>
+    <script type="text/javascript" src="../js/common.js"></script>
+    <script type="text/javascript" src="../js/detailGood.js"></script>
+    <!--<script type="text/javascript">
+        $(document).ready(function () {
+            $("#micpic").jcarousel({initCallback: mycarousel_initCallback});
+            $(".jqzoom").jqueryzoom({
+                xzoom: 300,
+                yzoom: 300,
+                bigpicWidth: 700,
+                bigpicHeight: 700,
+                smallWidth: 400,
+                smallHeight: 460,
+                offset: 5,
+                position: "right",
+                preload: 1,
+                lens: 1
+            });
+            $("#micpic").jCarouselLite({
+                btnPrev: ".btnleft",
+                btnNext: ".btnright",
+                visible: 4,
+                speed: 500,
+                vertical: true,//向上滚动
+                circular: false	//不循环滚动
+                //auto:800,				//自动滚动
+                //scroll:2   			//滚动替换两张图
+                //vertical:true  		//竖列展示
+                //easing:"bounceout",	//有缓冲效果,需要jquery.easing.1.1.js文件
+                //mouseWheel:true			//支持鼠标滚动切换图片,需要jquery.mousewheel.js文件
+            });
+            $("#micpic ul li").mouseover(function () {
+                $('#slidePic ul li,.hover').removeClass('hover');
+                $(this).addClass('hover');
+            });
+            $(".btnleft,.btnright").mouseover(function () {
+                $(this).css("cursor", "hand");
+            });
+        });
+    </script>-->
+</head>
+
+<body>
+<div style="width:980px; margin:0px auto;">
+    <div ms-controller="header" ms-include-src="'header.html'"></div>
+
+    <!-- InstanceBeginEditable name="EditRegion3" -->
+    <div style="margin:8px auto; width:98%;" ms-controller="detailGoodModel">
+        <div id="drop">
+            <div id="dropMid">
+                <!-- 商品的图片列表 -->
+                <div id="imglist" style="margin:0px auto;">
+                    <span><img src="../images/detailGood/arr1.jpg" class="btnleft"/></span>
+
+                    <div>
+                        <ul class="jcarousel-skin-tango">
+                            <li ms-repeat="pic"><img ms-src="{{imagesUrl}}{{el}}" ms-attr-id="{{$index}}" width="75" height="78"/></li>
+                        </ul>
+                    </div>
+                    <span><img src="../images/detailGood/arr2.jpg" class="btnright"/></span>
+                </div>
+                <!-- 商品的图片列表结束 -->
+            </div>
+        </div>
+        <div id="show">
+            <div id="showMid">
+                <!-- 商品大图的显示 -->
+                <div id="picshow">
+                    <div id="BigImage" class="jqzoom" style="border:1px solid #ccc;">
+                        <img id="middleImage" ms-src="{{imagesUrl}}{{pic[0]}}" ms-attr-longdesc="{{imagesUrl}}{{pic[0]}}" width="400" height="460"/>
+                    </div>
+                </div>
+                <!-- 商品大图的显示结束 -->
+                <!-- 商品的详细信息 -->
+                <div id="goodinfo">
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                            <td colspan="2" class="title"><strong
+                                    style="color:#FF0000;font-size:18px;">我的需求..尽在Gogo</strong></td>
+                        </tr>
+                        <tr>
+                            <td class="index">商品编号：</td>
+                            <td class="info">{{commodity.id}}</td>
+                        </tr>
+                        <tr>
+                            <td class="index">所属类别：</td>
+                            <td class="info">{{commodity.categoryName}}</td>
+                        </tr>
+                        <tr>
+                            <td class="index">商品品牌：</td>
+                            <td class="info">{{commodity.brand}}</td>
+                        </tr>
+                        <tr>
+                            <td class="index" style="border-bottom:1px dashed #CC0000">毛重：</td>
+                            <td class="info" style="border-bottom:1px dashed #cc0000">{{commodity.weight}}</td>
+                        </tr>
+                        <tr>
+                            <td class="index">市场价格：</td>
+                            <td class="info" style="text-decoration:line-through">{{commodity.price + 50}}</td>
+                        </tr>
+                        <tr>
+                            <td class="index">为你节省：</td>
+                            <td class="info">￥ 50</td>
+                        </tr>
+                        <tr>
+                            <td class="index" style="color:#CC0000;">商场售价：</td>
+                            <td class="info" style="color:#CC0000; font-size:18px; font:bold">{{commodity.price}}</td>
+                        </tr>
+                        <tr>
+                            <td><input type="image" src="../images/detailGood/btn_cart.gif" ms-click="addShoppingCart()"></td>
+                        </tr>
+                    </table>
+                </div>
+                <!-- 商品详细信息结束 -->
+                <div style="clear:both; height:15px;"></div>
+            </div>
+        </div>
+        <!-- 商品的描述 -->
+        <div style="height:20px; clear:both;"></div>
+        <div id="detail">
+            <div id="detailMid">
+                <h1>产品描述：</h1>
+
+                <p>{{commodity.remark}}
+                </p>
+
+                <h1>详细信息：</h1>
+
+                <p>{{commodity.description}}
+                </p>
+                <table>
+                    <tr ms-repeat="detailPics">
+                        <td><img ms-src="{{imagesUrl}}{{el}}" id="$index" width="890"/></td></tr>
+                </table>
+            </div>
+        </div>
+        <!-- 商品详细描述结束 -->
+    </div>
+    <!-- InstanceEndEditable -->
+    <div ms-controller="footer" ms-include-src="'footer.html'"></div>
+</div>
+</body>
+</html>

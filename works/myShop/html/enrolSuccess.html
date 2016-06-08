@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Gogo商场用户注册</title>
+    <meta charset="UTF-8">
+    <!-- InstanceEndEditable -->
+    <link href="../css/index/index.css" rel="stylesheet"
+          type="text/css"/>
+    <link href="../css/enrolSuxxess.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="../libs/jquery/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="../libs/avalon.js"></script>
+    <script type="text/javascript" src="../js/common.js"></script>
+    <script type="text/javascript">
+        var sec = 5;
+        setInterval("castTime()", 1000);
+        function castTime() {
+            document.getElementById("showTime").innerHTML = sec-- + "秒";
+            if (sec < 0) {
+                window.open("index.html", "_self");
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+<div style="width:980px; margin:0px auto;">
+    <div ms-controller="header" ms-include-src="'header.html'"></div>
+    <div id="register" style="text-align: center;">
+        <div>
+            <h1>恭喜您注册成功</h1>
+
+            <p><span>您的登录名是注册的手机或者邮箱。 </span><span
+                    style="margin-left:18px;">(请记好您的登录名，以防造成不必要的麻烦)</span></p>
+
+            <p style="margin-left:200px; margin-bottom:50px;">
+                页面将在<span id="showTime" style="color:#FF0000;margin:0px 3px;">5秒</span>后自动跳转到<a
+                    href="index.html" style="color:#0066FF">Gogo首页</a>
+            </p>
+        </div>
+    </div>
+    <div ms-controller="footer" ms-include-src="'footer.html'"></div>
+</div>
+</body>
+<!-- InstanceEnd -->
+</html>

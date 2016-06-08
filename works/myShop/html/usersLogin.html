@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <!-- InstanceBeginEditable name="doctitle" -->
+    <title>用户登录</title>
+    <!-- InstanceEndEditable -->
+    <link href="../css/index/index.css" rel="stylesheet" type="text/css"/>
+    <link href="../css/login/ulogin.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="../js/validate/jquery.js"></script>
+    <script type="text/javascript" src="../js/public.js"></script>
+    <script type="text/javascript" src="../js/validate/jquery.validate.js"></script>
+    <script type="text/javascript" src="../libs/avalon.js"></script>
+    <script type="text/javascript" src="../js/common.js"></script>
+    <script type="text/javascript" src="../js/userLogin.js"></script>
+
+    <!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
+</head>
+
+<body>
+<div style="width:980px; margin:0px auto;">
+    <div ms-controller="header" ms-include-src="'header.html'"></div>
+
+    <!-- InstanceBeginEditable name="EditRegion3" -->
+    <div style="margin-bottom:10px; border-bottom:1px solid #D5D5D5" ms-controller="userLoginModel">
+        <div>
+            <h1 style="font-size:14px; color:#000000; margin-top:10px; background-image:url(../images/car/top-bg.jpg); height:36px;">
+                <img style="float:left" src="../images/car/top-left.jpg"/>
+                <b style="float:left;font-size:14px; color:#000000; margin-top:12px;">用户登录</b>
+                <img style="float:right" src="../images/car/top-right.jpg"/>
+            </h1>
+        </div>
+        <div style="border-left:1px solid #D5D5D5; border-right:1px solid #D5D5D5">
+            <div id="login">
+                <div id="left">
+                    <!--<div>-->
+                        <!--<div id="left_top">-->
+                            <!--您现在使用的是新版登录页面，如果在使用中遇到问题，请<a href="../userLogin.html">返回旧版</a>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <div class="bo"><label>用户账号：</label><input type="text" class="text1" id="account"
+                                                               name="account"/><span></span></div>
+                    <div class="bo"><label>用户密码：</label><input type="password" class="text1" id="password"
+                                                               name="password"/><span id="info" style="color:#ff0000"></span>
+                    </div>
+                    <div>
+                        <label>验证码：</label><input type="text" id="randCode" name="randCode" class="login_code" placeholder="验证码"/>
+                        <img id="img" src="/rand/code.do" title="更换验证码"/>
+                        <a href="javascript:void(0)" onClick="refreshRand()">换一张</a>
+
+                    </div>
+                    <div>
+                        <input type="button" id="userLogin" style="background: url('../images/login/login.jpg');" ms-click="sub" value=""/>
+                    </div>
+                </div>
+                <div id="center"></div>
+                <div id="right">
+                    <b>还不是Gogo商城用户？</b>
+
+                    <p>现在免费注册成为Gogo商城用户，便能立刻享受便宜而又放心的购物乐趣！</p>
+                    <a href="../html/userEnrol.html" style="margin-left:60px;"><img style="border:none" src="../images/login/login_zc.jpg"/></a>
+                </div>
+                <div style="clear:both"></div>
+            </div>
+        </div>
+    </div>
+    <!-- InstanceEndEditable -->
+    <div ms-controller="footer" ms-include-src="'footer.html'"></div>
+</div>
+</body>
+<!-- InstanceEnd --></html>

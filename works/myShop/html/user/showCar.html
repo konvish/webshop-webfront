@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Gogo商场购物车</title>
+    <meta charset="UTF-8">
+    <!-- InstanceEndEditable -->
+    <link href="../../css/index/index.css" rel="stylesheet"
+          type="text/css"/>
+    <!-- InstanceBeginEditable name="head" -->
+    <link href="../../css/index/showCar.css" rel="stylesheet"
+          type="text/css"/>
+
+    <script type="text/javascript" src="../../js/jquery.js"></script>
+    <script type="text/javascript" src="../../js/public.js"></script>
+    <script type="text/ecmascript" src="../../js/area.js"></script>
+    <script type="text/javascript" src="../../libs/avalon.js"></script>
+    <script type="text/javascript" src="../../js/user/common.js"></script>
+    <script type="text/javascript" src="../../js/user/showCar.js"></script>
+</head>
+
+<body>
+<div style="width: 980px; margin: 0px auto;">
+    <div ms-controller="header" ms-include-src="'header.html'"></div>
+
+    <div id="mid" style="margin-bottom: 20px;" ms-controller="showCarModel">
+        <div style="margin-left: 100px; height: 300px;" id="nocar" ms-if="flag==0">
+            <img src="../../images/car/car.jpg"
+                 style="float: left; margin-right: 5px; margin-top: 80px;"/>
+
+            <h1 style="padding-top: 110px; font-size: 18px; color: #A42221">
+                您的购物车还是空的，赶快行动吧！
+            </h1>
+
+            <p style="padding-top: 10px; color: #000000">
+                马上去
+                <a href="../index.html">Gogo首页</a>
+            </p>
+
+        </div>
+
+        <div id="showCar" ms-if="flag!=0">
+            <h1 style="font-size: 14px; color: #000000; padding-bottom: 5px;">
+                已选择的商品：
+            </h1>
+
+            <div>
+                <table width="100%" cellspacing="0" cellpadding="0">
+                    <tr id="title">
+                        <td width="12%">
+                            商品编号
+                        </td>
+                        <td>
+                            商品名称
+                        </td>
+                        <td width="12%">
+                            销售价格
+                        </td>
+                        <td width="12%">
+                            数量
+                        </td>
+                        <td width="12%">
+                            小计
+                        </td>
+                        <td width="20%">
+                            从购物车中删除
+                        </td>
+                    </tr>
+                    <!-- 购物车里一个商品的信息 -->
+                    <tr ms-repeat="commodityList">
+                        <td width="130">
+                            {{el.commodityId}}
+                        </td>
+                        <td>
+                            {{el.commodityName}}
+                        </td>
+                        <td width="100">
+                            {{el.price}}
+                        </td>
+                        <td>
+                            <img class="cut" src="../../images/car/cut.jpg" id="-1"
+                                 title="减少商品数量" ms-click="downNumber(el.id,el.price)"/>
+                            <input type="text" class="gnumber" ms-attr-id="{{el.id}}" maxlength="3" ms-attr-value="el.number"/>
+                            <img class="cut" src="../../images/car/add.jpg" id="-2"
+                                 title="增加商品数量" ms-click="addNumber(el.id,el.price)"/>
+                        </td>
+                        <td width="100">
+                            <input type="text" ms-attr-id="total{{el.id}}" readonly ms-attr-value="el.price"/>
+                        </td>
+                        <td width="120">
+                            <input type="button" value="删除" name="but" ms-click="deleteShoppingCommodity(el.id)"/>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="ftotal" id="ftotal">
+                商品总价:￥{{totalPrice}}
+            </div>
+            <div class="ftotal" style="padding-right: 9px;">
+                <a href="../index.html"><img
+                        style="margin: 0px 5px 3px;" src="../../images/car/gogo.jpg"/>
+                </a>
+                <a ms-click="deleteShoppingCommodityAll()" id="remove"><img
+                        style="margin: 0px 5px 3px;"
+                        src="../../images/car/goClear.jpg"/>
+                </a>
+
+                <a ms-click="submitShoppingCart()" id="go"><img
+                        src="../../images/car/goPay.jpg"/>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div ms-controller="footer" ms-include-src="'footer.html'"></div>
+</div>
+</body>
+<!-- InstanceEnd -->
+</html>
